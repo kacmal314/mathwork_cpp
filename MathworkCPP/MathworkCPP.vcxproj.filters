@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="MathworkCPP">
+      <UniqueIdentifier>{87ce56e9-b002-4d08-a078-ff2443017c7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MathworkCPP\Extended">
+      <UniqueIdentifier>{6cf315fe-4da3-4691-b551-d2f442888651}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MathworkCPP\Helper">
+      <UniqueIdentifier>{48a8e913-3557-45d0-a276-fda3125d5c8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MathworkCPP\Enumerated">
+      <UniqueIdentifier>{b88e8566-643a-48c1-bdd9-842023aa449f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MathworkCPP\Exceptions">
+      <UniqueIdentifier>{4a592e83-4e53-4ed2-b655-b63973fc875b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MathworkCPP\Extended\String.cpp">
+      <Filter>MathworkCPP\Extended</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Extended\Vector.cpp">
+      <Filter>MathworkCPP\Extended</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Convert.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Filesystem.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Matrix.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Random.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Statistics.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Point.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\HookeJeeves.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Constrainer.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Polynomial.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Coefficients.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Powers.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Exceptions\CoordinateException.cpp">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Exceptions\CoordinateMismatchException.cpp">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Exceptions\Exception.cpp">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Exceptions\IterationLimitException.cpp">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Exceptions\MatrixSizeException.cpp">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Exceptions\PolynomialDegreeException.cpp">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Exceptions\PowerException.cpp">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Exceptions\SolvingFunctionException.cpp">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Exceptions\SquareMatrixException.cpp">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Exceptions\ZeroDeterminantException.cpp">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Number.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\UnitTest.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Interface.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\ConsoleInterface.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\FunctionValidator.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Function.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\FunctionParser.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Exceptions\ParserException.cpp">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MathworkCPP\Helper\declarations.h">
+      <Filter>MathworkCPP\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP.h" />
+    <ClInclude Include="MathworkCPP\Extended\Vector.h">
+      <Filter>MathworkCPP\Extended</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Extended\String.h">
+      <Filter>MathworkCPP\Extended</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Convert.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Filesystem.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Matrix.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Random.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Enumerated\InputType.h">
+      <Filter>MathworkCPP\Enumerated</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Statistics.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Point.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\HookeJeeves.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Constrainer.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Polynomial.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Coefficients.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Powers.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Exceptions\CoordinateException.h">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Exceptions\CoordinateMismatchException.h">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Exceptions\Exception.h">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Exceptions\IterationLimitException.h">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Exceptions\MatrixSizeException.h">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Exceptions\PolynomialDegreeException.h">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Exceptions\PowerException.h">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Exceptions\SolvingFunctionException.h">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Exceptions\SquareMatrixException.h">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Exceptions\ZeroDeterminantException.h">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Enumerated\FunctionType.h">
+      <Filter>MathworkCPP\Enumerated</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Number.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\UnitTest.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Helper\definitions.h">
+      <Filter>MathworkCPP\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Helper\macro.h">
+      <Filter>MathworkCPP\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Interface.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\ConsoleInterface.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\FunctionValidator.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Function.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\FunctionParser.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Exceptions\ParserException.h">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{17268833-3638-470f-96ae-7711fec4c77d}</ProjectGuid>
+    <RootNamespace>DeskworkCPP</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>MathworkCPP</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MathworkCPP\Coefficients.cpp" />
+    <ClCompile Include="MathworkCPP\ConsoleInterface.cpp" />
+    <ClCompile Include="MathworkCPP\Constrainer.cpp" />
+    <ClCompile Include="MathworkCPP\Convert.cpp" />
+    <ClCompile Include="MathworkCPP\Exceptions\CoordinateException.cpp" />
+    <ClCompile Include="MathworkCPP\Exceptions\CoordinateMismatchException.cpp" />
+    <ClCompile Include="MathworkCPP\Exceptions\Exception.cpp" />
+    <ClCompile Include="MathworkCPP\Exceptions\IterationLimitException.cpp" />
+    <ClCompile Include="MathworkCPP\Exceptions\MatrixSizeException.cpp" />
+    <ClCompile Include="MathworkCPP\Exceptions\ParserException.cpp" />
+    <ClCompile Include="MathworkCPP\Exceptions\PolynomialDegreeException.cpp" />
+    <ClCompile Include="MathworkCPP\Exceptions\PowerException.cpp" />
+    <ClCompile Include="MathworkCPP\Exceptions\SolvingFunctionException.cpp" />
+    <ClCompile Include="MathworkCPP\Exceptions\SquareMatrixException.cpp" />
+    <ClCompile Include="MathworkCPP\Exceptions\ZeroDeterminantException.cpp" />
+    <ClCompile Include="MathworkCPP\Extended\String.cpp" />
+    <ClCompile Include="MathworkCPP\Extended\Vector.cpp" />
+    <ClCompile Include="MathworkCPP\Filesystem.cpp" />
+    <ClCompile Include="MathworkCPP\Function.cpp" />
+    <ClCompile Include="MathworkCPP\FunctionParser.cpp" />
+    <ClCompile Include="MathworkCPP\HookeJeeves.cpp" />
+    <ClCompile Include="MathworkCPP\Interface.cpp" />
+    <ClCompile Include="MathworkCPP\Matrix.cpp" />
+    <ClCompile Include="MathworkCPP\Polynomial.cpp" />
+    <ClCompile Include="MathworkCPP\FunctionValidator.cpp" />
+    <ClCompile Include="MathworkCPP\Number.cpp" />
+    <ClCompile Include="MathworkCPP\Point.cpp" />
+    <ClCompile Include="MathworkCPP\Powers.cpp" />
+    <ClCompile Include="MathworkCPP\Random.cpp" />
+    <ClCompile Include="MathworkCPP\Statistics.cpp" />
+    <ClCompile Include="MathworkCPP\UnitTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MathworkCPP.h" />
+    <ClInclude Include="MathworkCPP\Coefficients.h" />
+    <ClInclude Include="MathworkCPP\ConsoleInterface.h" />
+    <ClInclude Include="MathworkCPP\Constrainer.h" />
+    <ClInclude Include="MathworkCPP\Convert.h" />
+    <ClInclude Include="MathworkCPP\Enumerated\FunctionType.h" />
+    <ClInclude Include="MathworkCPP\Enumerated\InputType.h" />
+    <ClInclude Include="MathworkCPP\Exceptions\CoordinateException.h" />
+    <ClInclude Include="MathworkCPP\Exceptions\CoordinateMismatchException.h" />
+    <ClInclude Include="MathworkCPP\Exceptions\Exception.h" />
+    <ClInclude Include="MathworkCPP\Exceptions\IterationLimitException.h" />
+    <ClInclude Include="MathworkCPP\Exceptions\MatrixSizeException.h" />
+    <ClInclude Include="MathworkCPP\Exceptions\ParserException.h" />
+    <ClInclude Include="MathworkCPP\Exceptions\PolynomialDegreeException.h" />
+    <ClInclude Include="MathworkCPP\Exceptions\PowerException.h" />
+    <ClInclude Include="MathworkCPP\Exceptions\SolvingFunctionException.h" />
+    <ClInclude Include="MathworkCPP\Exceptions\SquareMatrixException.h" />
+    <ClInclude Include="MathworkCPP\Exceptions\ZeroDeterminantException.h" />
+    <ClInclude Include="MathworkCPP\Extended\String.h" />
+    <ClInclude Include="MathworkCPP\Extended\Vector.h" />
+    <ClInclude Include="MathworkCPP\Filesystem.h" />
+    <ClInclude Include="MathworkCPP\Function.h" />
+    <ClInclude Include="MathworkCPP\FunctionParser.h" />
+    <ClInclude Include="MathworkCPP\Helper\declarations.h" />
+    <ClInclude Include="MathworkCPP\Helper\definitions.h" />
+    <ClInclude Include="MathworkCPP\Helper\macro.h" />
+    <ClInclude Include="MathworkCPP\HookeJeeves.h" />
+    <ClInclude Include="MathworkCPP\Interface.h" />
+    <ClInclude Include="MathworkCPP\Matrix.h" />
+    <ClInclude Include="MathworkCPP\Polynomial.h" />
+    <ClInclude Include="MathworkCPP\FunctionValidator.h" />
+    <ClInclude Include="MathworkCPP\Number.h" />
+    <ClInclude Include="MathworkCPP\Point.h" />
+    <ClInclude Include="MathworkCPP\Powers.h" />
+    <ClInclude Include="MathworkCPP\Random.h" />
+    <ClInclude Include="MathworkCPP\Statistics.h" />
+    <ClInclude Include="MathworkCPP\UnitTest.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
