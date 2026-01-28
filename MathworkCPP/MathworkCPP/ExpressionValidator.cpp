@@ -2,26 +2,26 @@
 
 #include <cmath>
 
-#include "FunctionValidator.h"
+#include "ExpressionValidator.h"
 
 using namespace MathworkCPP;
 
 //*****************************************************************************
-bool FunctionValidator::is(Function const * function,
-                           Enumerated::FunctionType type)
+bool ExpressionValidator::is(Expression const * expression,
+                           Enumerated::ExpressionType type)
 {
   return false;
 }
 
 //*****************************************************************************
-bool FunctionValidator::isOnly(Function const * function,
-                               Enumerated::FunctionType type)
+bool ExpressionValidator::isOnly(Expression const * expression,
+                               Enumerated::ExpressionType type)
 {
   return false;
 }
 
 //*****************************************************************************
-bool FunctionValidator::isConstant(Function const * function)
+bool ExpressionValidator::isConstant(Expression const * expression)
 {
   return false;
 }

@@ -130,6 +130,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MathworkCPP\BinaryTree.cpp" />
     <ClCompile Include="MathworkCPP\Coefficients.cpp" />
     <ClCompile Include="MathworkCPP\ConsoleInterface.cpp" />
     <ClCompile Include="MathworkCPP\Constrainer.cpp" />
@@ -148,13 +149,14 @@
     <ClCompile Include="MathworkCPP\Extended\String.cpp" />
     <ClCompile Include="MathworkCPP\Extended\Vector.cpp" />
     <ClCompile Include="MathworkCPP\Filesystem.cpp" />
-    <ClCompile Include="MathworkCPP\Function.cpp" />
-    <ClCompile Include="MathworkCPP\FunctionParser.cpp" />
+    <ClCompile Include="MathworkCPP\Expression.cpp" />
+    <ClCompile Include="MathworkCPP\ExpressionParser.cpp" />
     <ClCompile Include="MathworkCPP\HookeJeeves.cpp" />
     <ClCompile Include="MathworkCPP\Interface.cpp" />
     <ClCompile Include="MathworkCPP\Matrix.cpp" />
+    <ClCompile Include="MathworkCPP\Node.cpp" />
     <ClCompile Include="MathworkCPP\Polynomial.cpp" />
-    <ClCompile Include="MathworkCPP\FunctionValidator.cpp" />
+    <ClCompile Include="MathworkCPP\ExpressionValidator.cpp" />
     <ClCompile Include="MathworkCPP\Number.cpp" />
     <ClCompile Include="MathworkCPP\Point.cpp" />
     <ClCompile Include="MathworkCPP\Powers.cpp" />
@@ -164,11 +166,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MathworkCPP.h" />
+    <ClInclude Include="MathworkCPP\BinaryTree.h" />
     <ClInclude Include="MathworkCPP\Coefficients.h" />
     <ClInclude Include="MathworkCPP\ConsoleInterface.h" />
     <ClInclude Include="MathworkCPP\Constrainer.h" />
     <ClInclude Include="MathworkCPP\Convert.h" />
-    <ClInclude Include="MathworkCPP\Enumerated\FunctionType.h" />
+    <ClInclude Include="MathworkCPP\Enumerated\ExpressionType.h" />
     <ClInclude Include="MathworkCPP\Enumerated\InputType.h" />
     <ClInclude Include="MathworkCPP\Exceptions\CoordinateException.h" />
     <ClInclude Include="MathworkCPP\Exceptions\CoordinateMismatchException.h" />
@@ -184,16 +187,17 @@
     <ClInclude Include="MathworkCPP\Extended\String.h" />
     <ClInclude Include="MathworkCPP\Extended\Vector.h" />
     <ClInclude Include="MathworkCPP\Filesystem.h" />
-    <ClInclude Include="MathworkCPP\Function.h" />
-    <ClInclude Include="MathworkCPP\FunctionParser.h" />
+    <ClInclude Include="MathworkCPP\Expression.h" />
+    <ClInclude Include="MathworkCPP\ExpressionParser.h" />
     <ClInclude Include="MathworkCPP\Helper\declarations.h" />
     <ClInclude Include="MathworkCPP\Helper\definitions.h" />
     <ClInclude Include="MathworkCPP\Helper\macro.h" />
     <ClInclude Include="MathworkCPP\HookeJeeves.h" />
     <ClInclude Include="MathworkCPP\Interface.h" />
     <ClInclude Include="MathworkCPP\Matrix.h" />
+    <ClInclude Include="MathworkCPP\Node.h" />
     <ClInclude Include="MathworkCPP\Polynomial.h" />
-    <ClInclude Include="MathworkCPP\FunctionValidator.h" />
+    <ClInclude Include="MathworkCPP\ExpressionValidator.h" />
     <ClInclude Include="MathworkCPP\Number.h" />
     <ClInclude Include="MathworkCPP\Point.h" />
     <ClInclude Include="MathworkCPP\Powers.h" />

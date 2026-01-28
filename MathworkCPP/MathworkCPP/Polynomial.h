@@ -5,7 +5,7 @@
 ///
 /// Polynomial
 /// # model function of type: polynomial
-/// # derive from class: Function
+/// # derive from class: Expression
 
 #include <string>
 
@@ -16,14 +16,14 @@
 #include "Exceptions/SolvingFunctionException.h"
 #include "Exceptions/PolynomialDegreeException.h"
 #include "Exceptions/CoordinateMismatchException.h"
-#include "Enumerated/FunctionType.h"
-#include "Function.h"
+#include "Enumerated/ExpressionType.h"
+#include "Expression.h"
 #include "Point.h"
 
 namespace MathworkCPP
 {
 	//-----------------------------------------------------------------------------
-	class Polynomial : Function
+	class Polynomial : Expression
 	{
     private:
 
@@ -42,7 +42,7 @@ namespace MathworkCPP
       int countExpressions();
       int countVariables();
       double degree();
-      double f(Point X) override;
+      double evaluate(Point X) override;
       std::string getVariableNames();
       void reset();
       vectorPoint solve(

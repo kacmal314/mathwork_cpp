@@ -21,7 +21,7 @@
 // MathworkCPP CLASSES
 //
 
-#include "MathworkCPP/Enumerated/FunctionType.h"
+#include "MathworkCPP/Enumerated/ExpressionType.h"
 #include "MathworkCPP/Enumerated/InputType.h"
 
 #include "MathworkCPP/Coefficients.h"
@@ -33,8 +33,8 @@
 #include "MathworkCPP/Interface.h"
 #include "MathworkCPP/Matrix.h"
 #include "MathworkCPP/Polynomial.h"
-#include "MathworkCPP/Function.h"
-#include "MathworkCPP/FunctionValidator.h"
+#include "MathworkCPP/Expression.h"
+#include "MathworkCPP/ExpressionValidator.h"
 #include "MathworkCPP/Number.h"
 #include "MathworkCPP/Point.h"
 #include "MathworkCPP/Powers.h"

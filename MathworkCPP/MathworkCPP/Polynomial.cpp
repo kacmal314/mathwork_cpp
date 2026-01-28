@@ -92,7 +92,7 @@ double Polynomial::degree()
 }
 
 //*****************************************************************************
-double Polynomial::f(Point X)
+double Polynomial::evaluate(Point X)
 {
   if (X.countCoordinates() != countVariables())
   {

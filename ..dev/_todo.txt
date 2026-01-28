@@ -80,8 +80,6 @@
 	
 [todo]	#07 Upgrade Function::class
 				(DONT USE REGEX, regex guesses the structure, parser knows the structure)
-				(regex is good at matching expressions)
-				(parser wyrazen matematycznych)
 				
 				[done] Model in Scribblebook C
 				[done] Create Function::class

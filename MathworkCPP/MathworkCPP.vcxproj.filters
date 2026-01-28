@@ -100,17 +100,23 @@
     <ClCompile Include="MathworkCPP\ConsoleInterface.cpp">
       <Filter>MathworkCPP</Filter>
     </ClCompile>
-    <ClCompile Include="MathworkCPP\FunctionValidator.cpp">
+    <ClCompile Include="MathworkCPP\ExpressionValidator.cpp">
       <Filter>MathworkCPP</Filter>
     </ClCompile>
-    <ClCompile Include="MathworkCPP\Function.cpp">
+    <ClCompile Include="MathworkCPP\Expression.cpp">
       <Filter>MathworkCPP</Filter>
     </ClCompile>
-    <ClCompile Include="MathworkCPP\FunctionParser.cpp">
+    <ClCompile Include="MathworkCPP\ExpressionParser.cpp">
       <Filter>MathworkCPP</Filter>
     </ClCompile>
     <ClCompile Include="MathworkCPP\Exceptions\ParserException.cpp">
       <Filter>MathworkCPP\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\BinaryTree.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Node.cpp">
+      <Filter>MathworkCPP</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -190,7 +196,7 @@
     <ClInclude Include="MathworkCPP\Exceptions\ZeroDeterminantException.h">
       <Filter>MathworkCPP\Exceptions</Filter>
     </ClInclude>
-    <ClInclude Include="MathworkCPP\Enumerated\FunctionType.h">
+    <ClInclude Include="MathworkCPP\Enumerated\ExpressionType.h">
       <Filter>MathworkCPP\Enumerated</Filter>
     </ClInclude>
     <ClInclude Include="MathworkCPP\Number.h">
@@ -211,17 +217,23 @@
     <ClInclude Include="MathworkCPP\ConsoleInterface.h">
       <Filter>MathworkCPP</Filter>
     </ClInclude>
-    <ClInclude Include="MathworkCPP\FunctionValidator.h">
+    <ClInclude Include="MathworkCPP\ExpressionValidator.h">
       <Filter>MathworkCPP</Filter>
     </ClInclude>
-    <ClInclude Include="MathworkCPP\Function.h">
+    <ClInclude Include="MathworkCPP\Expression.h">
       <Filter>MathworkCPP</Filter>
     </ClInclude>
-    <ClInclude Include="MathworkCPP\FunctionParser.h">
+    <ClInclude Include="MathworkCPP\ExpressionParser.h">
       <Filter>MathworkCPP</Filter>
     </ClInclude>
     <ClInclude Include="MathworkCPP\Exceptions\ParserException.h">
       <Filter>MathworkCPP\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\BinaryTree.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Node.h">
+      <Filter>MathworkCPP</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

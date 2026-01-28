@@ -1,10 +1,10 @@
-#include "Function.h"
+#include "Expression.h"
 
 using namespace MathworkCPP;
 
 //*****************************************************************************
 
-double Function::f(Point X)
+double Expression::evaluate(Point X)
 {
   return 0;
 }

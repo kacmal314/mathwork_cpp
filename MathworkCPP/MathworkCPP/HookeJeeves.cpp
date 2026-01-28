@@ -133,8 +133,8 @@ Point HookeJeeves::findOptimum(Polynomial &poly, bool isMinimizing)
 bool HookeJeeves::verify()
 {
   return  HookeJeeves::isMinimizing ?
-    polynomial->f(pointPre) > polynomial->f(pointNow) :   // pre > now ∵ we go down
-    polynomial->f(pointPre) < polynomial->f(pointNow);    // pre < now ∵ we go up, up, up~
+    polynomial->evaluate(pointPre) > polynomial->evaluate(pointNow) :   // pre > now ∵ we go down
+    polynomial->evaluate(pointPre) < polynomial->evaluate(pointNow);    // pre < now ∵ we go up, up, up~
 
 }
 
@@ -180,15 +180,15 @@ void HookeJeeves::explore(Point patternPoint)
     // prepare P+
     pointPlus.setCoordinate(i, pointPlus.getCoordinate(i) + delta);
     // compute f+
-    double fPlus = polynomial->f(pointPlus);
+    double fPlus = polynomial->evaluate(pointPlus);
 
     // compute f0
-    double fZero = polynomial->f(pointZero);
+    double fZero = polynomial->evaluate(pointZero);
 
     // prepare P-
     pointNegative.setCoordinate(i, pointNegative.getCoordinate(i) - delta);
     // compute f-
-    double fNegative = polynomial->f(pointNegative);
+    double fNegative = polynomial->evaluate(pointNegative);
 
     vectorDouble values;
     values.push_back(fPlus);      // Point Plus
