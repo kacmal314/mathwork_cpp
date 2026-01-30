@@ -1,5 +1,5 @@
-#pragma once
-
+#ifndef EXPRESSIONPARSER_h
+#define EXPRESSIONPARSER_h
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -8,14 +8,22 @@
 /// 
 /// # define expression parsing
 
+#include <vector>
 #include <string>
 
-#include "Extended/String.h"
+#include "Enumerated/ExpressionType.h"
+#include "ExpressionValidator.h"
 #include "BinaryTree.h"
-#include "Expression.h"
 
 namespace MathworkCPP
 {
+
+  //-----------------------------------------------------------------------------
+
+  //
+  // parsing is not: removing whitespace
+  // parsing is not: preprocessing
+
   class ExpressionParser
   {
 
@@ -23,9 +31,16 @@ namespace MathworkCPP
 
     BinaryTree parse(const std::string & expressionAsString);
 
+    bool is(Enumerated::ExpressionType type);
+
+    bool isOnly(Enumerated::ExpressionType type);
+
   private:
 
-    void validate(const std::string & expressionAsString);
-    std::string preprocess(const std::string & expressionAsString);
+    std::string validate(const std::string & expressionAsString);
+
+    bool isConstant();
   };
 }
+
+#endif // EXPRESSIONPARSER_h

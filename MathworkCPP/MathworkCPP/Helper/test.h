@@ -1,0 +1,15 @@
+#ifndef FUNCTION_TEST_H
+#define FUNCTION_TEST_H
+
+using namespace MathworkCPP;
+
+#include "../Testing/UnitTest.h"
+
+inline void test(Testing::UnitTest *_test)
+{
+  _test->test();
+
+  delete _test;
+}
+
+#endif // FUNCTION_TEST_H

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef EXPRESSION_H
+#define EXPRESSION_H
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -9,6 +10,8 @@
 
 #include <string>
 
+#include "ExpressionParser.h"
+#include "BinaryTree.h"
 #include "Point.h"
 
 namespace MathworkCPP
@@ -16,11 +19,23 @@ namespace MathworkCPP
   class Expression
   {
 
-    std::string expression {};
+  private:
+
+    ExpressionParser parser {};
+
+    std::string expressionAsString {};
+
+    BinaryTree expressionAsTree {};
 
   public:
+
+    Expression() = default;
+    Expression(std::string const & expressionAsString);
 
     virtual double evaluate(Point X);
 
   };
+
 }
+
+#endif // EXPRESSION_H

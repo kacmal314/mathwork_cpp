@@ -155,6 +155,7 @@
     <ClCompile Include="MathworkCPP\Interface.cpp" />
     <ClCompile Include="MathworkCPP\Matrix.cpp" />
     <ClCompile Include="MathworkCPP\Node.cpp" />
+    <ClCompile Include="MathworkCPP\NodeRule.cpp" />
     <ClCompile Include="MathworkCPP\Polynomial.cpp" />
     <ClCompile Include="MathworkCPP\ExpressionValidator.cpp" />
     <ClCompile Include="MathworkCPP\Number.cpp" />
@@ -162,7 +163,13 @@
     <ClCompile Include="MathworkCPP\Powers.cpp" />
     <ClCompile Include="MathworkCPP\Random.cpp" />
     <ClCompile Include="MathworkCPP\Statistics.cpp" />
-    <ClCompile Include="MathworkCPP\UnitTest.cpp" />
+    <ClCompile Include="MathworkCPP\Testing\ExpressionTest.cpp" />
+    <ClCompile Include="MathworkCPP\Testing\FileNameTest.cpp" />
+    <ClCompile Include="MathworkCPP\Testing\InverseMatrixTest.cpp" />
+    <ClCompile Include="MathworkCPP\Testing\MatrixTest.cpp" />
+    <ClCompile Include="MathworkCPP\Testing\RandomIntTest.cpp" />
+    <ClCompile Include="MathworkCPP\Testing\StringTest.cpp" />
+    <ClCompile Include="MathworkCPP\Testing\UnitTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MathworkCPP.h" />
@@ -192,10 +199,12 @@
     <ClInclude Include="MathworkCPP\Helper\declarations.h" />
     <ClInclude Include="MathworkCPP\Helper\definitions.h" />
     <ClInclude Include="MathworkCPP\Helper\macro.h" />
+    <ClInclude Include="MathworkCPP\Helper\test.h" />
     <ClInclude Include="MathworkCPP\HookeJeeves.h" />
     <ClInclude Include="MathworkCPP\Interface.h" />
     <ClInclude Include="MathworkCPP\Matrix.h" />
     <ClInclude Include="MathworkCPP\Node.h" />
+    <ClInclude Include="MathworkCPP\NodeRule.h" />
     <ClInclude Include="MathworkCPP\Polynomial.h" />
     <ClInclude Include="MathworkCPP\ExpressionValidator.h" />
     <ClInclude Include="MathworkCPP\Number.h" />
@@ -203,7 +212,13 @@
     <ClInclude Include="MathworkCPP\Powers.h" />
     <ClInclude Include="MathworkCPP\Random.h" />
     <ClInclude Include="MathworkCPP\Statistics.h" />
-    <ClInclude Include="MathworkCPP\UnitTest.h" />
+    <ClInclude Include="MathworkCPP\Testing\ExpressionTest.h" />
+    <ClInclude Include="MathworkCPP\Testing\FileNameTest.h" />
+    <ClInclude Include="MathworkCPP\Testing\InverseMatrixTest.h" />
+    <ClInclude Include="MathworkCPP\Testing\MatrixTest.h" />
+    <ClInclude Include="MathworkCPP\Testing\RandomIntTest.h" />
+    <ClInclude Include="MathworkCPP\Testing\StringTest.h" />
+    <ClInclude Include="MathworkCPP\Testing\UnitTest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

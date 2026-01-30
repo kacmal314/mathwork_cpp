@@ -5,19 +5,14 @@
 
 using namespace MathworkCPP;
 
-
 int main()
 {
-
-  UnitTest::testInverseMatrix();
-
-  std::cout << UnitTest::testFilesystemClass();
-
-  std::cout << UnitTest::testStringClass();
-
-  std::cout << UnitTest::testRandomClass();
-
-  std::cout << UnitTest::testMatrixClass();
+  //test(new Testing::InverseMatrixTest {});
+  test(new Testing::MatrixTest {});
+  test(new Testing::FileNameTest {});
+  test(new Testing::RandomIntTest {});
+  test(new Testing::StringTest {});
+  test(new Testing::ExpressionTest {});
 
   return 0;
 }

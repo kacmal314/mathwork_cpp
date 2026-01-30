@@ -7,21 +7,25 @@
 using namespace MathworkCPP;
 
 //*****************************************************************************
-bool ExpressionValidator::is(Expression const * expression,
-                           Enumerated::ExpressionType type)
+
+std::string ExpressionValidator::preprocess(const std::string & expressionAsString)
 {
-  return false;
+  std::string trimmed { Extended::String::removeWhiteCharacters(expressionAsString) };
+
+  return trimmed;
 }
 
 //*****************************************************************************
-bool ExpressionValidator::isOnly(Expression const * expression,
-                               Enumerated::ExpressionType type)
-{
-  return false;
-}
 
-//*****************************************************************************
-bool ExpressionValidator::isConstant(Expression const * expression)
+std::string ExpressionValidator::validate(const std::string & expressionAsString)
 {
-  return false;
+  std::string preprocessed { this->preprocess(expressionAsString) };
+
+  for (auto rule : this->rules)
+  {
+    rule->validate(preprocessed);
+  }
+
+  return preprocessed;
+
 }

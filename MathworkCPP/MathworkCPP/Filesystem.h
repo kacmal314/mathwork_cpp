@@ -22,6 +22,6 @@ namespace MathworkCPP
 
     public:
 
-      static std::string          filename(std::string path, bool withExtension = true);
+      static std::string filename(std::string path, bool withExtension = true);
   };
 }

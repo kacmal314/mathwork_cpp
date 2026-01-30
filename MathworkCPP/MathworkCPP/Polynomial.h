@@ -1,4 +1,5 @@
-#pragma once
+#ifndef POLYNOMIAL_H
+#define POLYNOMIAL_H
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -23,7 +24,8 @@
 namespace MathworkCPP
 {
 	//-----------------------------------------------------------------------------
-	class Polynomial : Expression
+
+	class Polynomial : public Expression
 	{
     private:
 
@@ -37,21 +39,32 @@ namespace MathworkCPP
 
       Polynomial();
       ~Polynomial();
+
       void addExpression(double coefficient, vectorNullableDouble powers);
+
       void addVariableName(char variable);
+
       int countExpressions();
+
       int countVariables();
+
       double degree();
+
       double evaluate(Point X) override;
+
       std::string getVariableNames();
+
       void reset();
-      vectorPoint solve(
-        Point inclusiveX1,
-        Point inclusiveX2,
-        double y,
-        double precision
-      );
+
+      vectorPoint solve(Point inclusiveX1,
+                        Point inclusiveX2,
+                        double y,
+                        double precision);
+
       vectorPoint solveLinear(double y = 0);
-      vectorPoint solveQuadratic(double y = 0);      
+
+      vectorPoint solveQuadratic(double y = 0);
   };
 }
+
+#endif // POLYNOMIAL_H

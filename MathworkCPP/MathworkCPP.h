@@ -1,6 +1,5 @@
-#pragma once
-
-
+#ifndef MATHWORKCPP_H
+#define MATHWORKCPP_H
 
 //
 // PRIVATE INCLUDED (C# internal classes)
@@ -40,7 +39,18 @@
 #include "MathworkCPP/Powers.h"
 #include "MathworkCPP/Random.h"
 #include "MathworkCPP/Statistics.h"
-#include "MathworkCPP/UnitTest.h"
+#include "MathworkCPP/Testing/FileNameTest.h"
+#include "MathworkCPP/Testing/InverseMatrixTest.h"
+#include "MathworkCPP/Testing/MatrixTest.h"
+#include "MathworkCPP/Testing/RandomIntTest.h"
+#include "MathworkCPP/Testing/StringTest.h"
+#include "MathworkCPP/Testing/ExpressionTest.h"
+
+// inline function
+
+#include "MathworkCPP/Helper/test.h"
 
 // make user write it as they require
 // using namespace MathworkCPP;
+
+#endif // MATHWORKCPP_H

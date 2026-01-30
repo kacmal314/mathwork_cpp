@@ -4,22 +4,42 @@ using namespace MathworkCPP;
 
 //*****************************************************************************
 
-std::string ExpressionParser::preprocess(const std::string & expressionAsString)
+bool ExpressionParser::is(Enumerated::ExpressionType type)
 {
-  std::string trimmed { Extended::String::removeWhiteCharacters(expressionAsString) };
+  return false;
+}
 
-  return trimmed;
+//*****************************************************************************
+
+bool ExpressionParser::isOnly(Enumerated::ExpressionType type)
+{
+  return false;
+}
+
+//*****************************************************************************
+
+bool ExpressionParser::isConstant()
+{
+  return false;
+}
+
+//*****************************************************************************
+
+std::string ExpressionParser::validate(const std::string & expressionAsString)
+{
+  ExpressionValidator validator;
+
+  return validator.validate(expressionAsString);
+
 }
 
 //*****************************************************************************
 
 BinaryTree ExpressionParser::parse(const std::string & expressionAsString)
 {
-  this->validate(expressionAsString);
-
-  std::string preprocessed = this->preprocess(expressionAsString);
+  std::string validated { this->validate(expressionAsString) };
 
   BinaryTree localTree;
 
-
+  return localTree;
 }
