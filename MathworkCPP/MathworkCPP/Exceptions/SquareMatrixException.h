@@ -19,8 +19,8 @@ namespace MathworkCPP
     {
       public:
 
-        SquareMatrixException();
-        SquareMatrixException(std::string message);
+        SquareMatrixException() : Exception("# of Columns and # of Rows have to be equal") {};
+        SquareMatrixException(std::string message) : Exception(message) {};
 
 
     };

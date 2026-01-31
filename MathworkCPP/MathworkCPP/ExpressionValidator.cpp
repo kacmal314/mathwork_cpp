@@ -23,7 +23,7 @@ std::string ExpressionValidator::validate(const std::string & expressionAsString
 
   for (auto rule : this->rules)
   {
-    rule->validate(preprocessed);
+    rule.validate(preprocessed);
   }
 
   return preprocessed;

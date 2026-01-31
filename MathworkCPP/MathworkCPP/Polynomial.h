@@ -32,13 +32,14 @@ namespace MathworkCPP
       using vectorPoint = std::vector<Point>;
 
       std::string variableNames {};
+
       Coefficients coefficients {};
       std::vector<Powers> powers {};
 
     public:
 
-      Polynomial();
-      ~Polynomial();
+      Polynomial() : Expression() {}; // delagated, finishing intialization list;
+      ~Polynomial() {};
 
       void addExpression(double coefficient, vectorNullableDouble powers);
 

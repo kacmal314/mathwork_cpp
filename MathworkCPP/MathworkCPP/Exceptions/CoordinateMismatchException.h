@@ -4,7 +4,9 @@
 
 ///
 /// CoordinateMismatchException
+/// 
 /// # used by Point
+/// 
 /// # used by Polynomial
 
 #include "CoordinateException.h"
@@ -19,12 +21,8 @@ namespace MathworkCPP
     {
       public:
 
-        CoordinateMismatchException();
-        CoordinateMismatchException(std::string message);
-
-      private:
-
-        void                          act();
+        CoordinateMismatchException() {};
+        CoordinateMismatchException(std::string message) {};
     };
 
   }

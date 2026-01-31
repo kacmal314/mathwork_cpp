@@ -18,7 +18,7 @@ namespace MathworkCPP
 {
   class BinaryTree
   {
-    std::vector<Node*> tree {};
+    std::vector<Node *> tree {};
 
   };
 }

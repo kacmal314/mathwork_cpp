@@ -18,10 +18,8 @@ namespace MathworkCPP
     {
       public:
 
-        MatrixSizeException();
-        MatrixSizeException(std::string message);
-
-
+        MatrixSizeException() : Exception() {};
+        MatrixSizeException(std::string message) : Exception(message) {};
     };
 
   }

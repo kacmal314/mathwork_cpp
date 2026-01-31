@@ -4,7 +4,9 @@
 
 ///
 /// IterationLimitException
+/// 
 /// # used by HookeJeeves
+/// 
 /// # used by iterative algorithms
 
 #include "Exception.h"
@@ -19,8 +21,11 @@ namespace MathworkCPP
     {
       public:
 
-        IterationLimitException();
-        IterationLimitException(std::string message);
+        IterationLimitException()
+          : Exception("Iterations Limit reached, precision compromised") {};
+
+        IterationLimitException(std::string message)
+          : Exception(message) {};
 
 
     };

@@ -19,8 +19,8 @@ namespace MathworkCPP
     {
       public:
 
-        ZeroDeterminantException();
-        ZeroDeterminantException(std::string message);
+        ZeroDeterminantException() : Exception("Matrix's Determinant cannot be zero") {};
+        ZeroDeterminantException(std::string message) : Exception(message) {};
 
 
     };

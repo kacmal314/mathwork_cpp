@@ -141,7 +141,7 @@ void Testing::MatrixTest::test()
   }
   catch (Exceptions::SquareMatrixException e)
   {
-    tested += NEW_LINE + e.Message();
+    tested += NEW_LINE + e.getMessage();
   }
 
   tested += NEW_LINE;
@@ -156,7 +156,7 @@ void Testing::MatrixTest::test()
   }
   catch (Exceptions::ZeroDeterminantException e)
   {
-    tested += NEW_LINE + e.Message();
+    tested += NEW_LINE + e.getMessage();
   }
 
   tested += NEW_LINE;

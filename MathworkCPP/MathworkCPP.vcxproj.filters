@@ -142,6 +142,9 @@
     <ClCompile Include="MathworkCPP\Testing\ExpressionTest.cpp">
       <Filter>MathworkCPP\Testing</Filter>
     </ClCompile>
+    <ClCompile Include="MathworkCPP\ConstantNode.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MathworkCPP\Helper\declarations.h">
@@ -282,6 +285,9 @@
     </ClInclude>
     <ClInclude Include="MathworkCPP\Testing\ExpressionTest.h">
       <Filter>MathworkCPP\Testing</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\ConstantNode.h">
+      <Filter>MathworkCPP</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

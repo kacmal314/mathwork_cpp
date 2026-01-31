@@ -133,6 +133,7 @@
     <ClCompile Include="MathworkCPP\BinaryTree.cpp" />
     <ClCompile Include="MathworkCPP\Coefficients.cpp" />
     <ClCompile Include="MathworkCPP\ConsoleInterface.cpp" />
+    <ClCompile Include="MathworkCPP\ConstantNode.cpp" />
     <ClCompile Include="MathworkCPP\Constrainer.cpp" />
     <ClCompile Include="MathworkCPP\Convert.cpp" />
     <ClCompile Include="MathworkCPP\Exceptions\CoordinateException.cpp" />
@@ -176,6 +177,7 @@
     <ClInclude Include="MathworkCPP\BinaryTree.h" />
     <ClInclude Include="MathworkCPP\Coefficients.h" />
     <ClInclude Include="MathworkCPP\ConsoleInterface.h" />
+    <ClInclude Include="MathworkCPP\ConstantNode.h" />
     <ClInclude Include="MathworkCPP\Constrainer.h" />
     <ClInclude Include="MathworkCPP\Convert.h" />
     <ClInclude Include="MathworkCPP\Enumerated\ExpressionType.h" />

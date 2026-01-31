@@ -11,6 +11,8 @@
 #include <vector>
 #include <string>
 
+#include "Extended/String.h"
+#include "Helper/declarations.h"
 #include "Enumerated/ExpressionType.h"
 #include "ExpressionValidator.h"
 #include "BinaryTree.h"
@@ -26,6 +28,14 @@ namespace MathworkCPP
 
   class ExpressionParser
   {
+    vector2String symbolArrays
+    {
+      // inverse precedence
+      /* 0: */ {"+", "-"},
+      /* 1: */ {"*", "/"},
+      /* 2: */ {"^"},
+      /* 3: */ {"sin", "log"}
+    };
 
   public:
 

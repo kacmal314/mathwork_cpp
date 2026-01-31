@@ -12,7 +12,7 @@ namespace MathworkCPP
 {
   class Node
   {
-    
+
   };
 }
 

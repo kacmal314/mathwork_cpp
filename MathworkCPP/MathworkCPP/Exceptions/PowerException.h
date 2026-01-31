@@ -18,12 +18,8 @@ namespace MathworkCPP
     {
       public:
 
-        PowerException();
-        PowerException(std::string message);
-
-
+        PowerException() : Exception() {};
+        PowerException(std::string message) : Exception(message) {};
     };
-
   }
-
 }

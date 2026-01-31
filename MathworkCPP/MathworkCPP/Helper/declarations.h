@@ -32,6 +32,9 @@ using pairCharString 	= std::pair<char, std::string>;
 using mapStringString 	= std::map<std::string, std::string>;
 using pairStringString 	= std::pair<std::string, std::string>;
 
+using vectorString = std::vector<std::string>;
+using vector2String = std::vector<vectorString>;
+
 using vectorBool = std::vector<bool>;
 using vector2Bool = std::vector<vectorBool>;
 

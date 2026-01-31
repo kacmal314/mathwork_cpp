@@ -19,8 +19,8 @@ namespace MathworkCPP
     {
       public:
 
-        SolvingFunctionException();
-        SolvingFunctionException(std::string message);
+        SolvingFunctionException() : Exception("Cannot solve function") {};
+        SolvingFunctionException(std::string message) : Exception(message) {};
 
 
     };

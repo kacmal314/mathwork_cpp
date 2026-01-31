@@ -10,12 +10,20 @@
 /// 
 /// # exception recovery functions
 
+#include "Exception.h"
+
 namespace MathworkCPP
 {
-  class ParserException
+  namespace Exceptions
   {
-  
-  };
+    class ParserException : public Exceptions::Exception
+    {
+    public:
+
+      ParserException() : Exception("parser exception") {};
+      ParserException(std::string message) : Exception(message) {};
+    };
+  }
 }
 
 #endif // PARSEREXCEPTION_H

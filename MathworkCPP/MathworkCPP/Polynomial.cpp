@@ -5,19 +5,6 @@
 using namespace MathworkCPP;
 
 //*****************************************************************************
-Polynomial::Polynomial()
-  : Expression() // delagated, finishing intialization list
-{
-
-}
-
-//*****************************************************************************
-Polynomial::~Polynomial()
-{
-
-}
-
-//*****************************************************************************
 
 void Polynomial::addExpression(double coefficient, vectorNullableDouble powers)
 {

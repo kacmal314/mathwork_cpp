@@ -18,10 +18,8 @@ namespace MathworkCPP
     {
       public:
 
-        PolynomialDegreeException();
-        PolynomialDegreeException(std::string message);
-
-
+        PolynomialDegreeException() : Exception("Polynomial has invalid degree") {};
+        PolynomialDegreeException(std::string message) : Exception(message) {};
     };
 
   }

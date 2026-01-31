@@ -31,7 +31,16 @@ namespace MathworkCPP
   class ExpressionValidator
   {
 
-    std::vector<NodeRule *> rules {};
+    std::vector<NodeRule> rules
+    {
+      // ^ : special regex character, even in capturing group
+      NodeRule("(\\+|-|\\*|\\/|\\^){2,}", "invalid operator syntax: double operator"),
+      NodeRule("\\.\\.", "invalid floating point symbol: double dot .."),
+      NodeRule(",", "invalid floating point symbol: comma,"),
+      NodeRule("[@$#&]", "invalid variable name: invalid chars @$#&"),
+      NodeRule("sin[^(]", "invalid sine function syntax: try sin(...)"),
+      NodeRule("log[^(]", "invalid log function syntax: try log(...)")
+    };
 
   public:
 

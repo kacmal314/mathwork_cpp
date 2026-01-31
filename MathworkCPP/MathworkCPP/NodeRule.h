@@ -8,7 +8,10 @@
 //
 // # ExpressionParser
 
+#include <regex>
 #include <string>
+
+#include "Exceptions/ParserException.h"
 
 namespace MathworkCPP
 {
@@ -19,11 +22,26 @@ namespace MathworkCPP
 
   class NodeRule
   {
+
+  protected:
+
+    std::string rule {};
+    std::string errorMessage {};
+
   public:
 
-    NodeRule() = default; // element-po-elemencie
+    // = default: element-po-elemencie
+    NodeRule(std::string rule, std::string errorMessage)
+      : rule(rule)
+      , errorMessage(errorMessage) {}
 
-    virtual bool validate(const std::string & expressionAsString) = 0;
+    void validate(const std::string & expressionAsString);
+
+    // returning a copy: getter has to return a copy
+    inline std::string getErrorMessage()
+    {
+      return this->errorMessage;
+    }
   };
 }
 

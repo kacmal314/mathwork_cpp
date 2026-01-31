@@ -45,7 +45,7 @@ void Testing::InverseMatrixTest::test()
     catch (Exceptions::Exception e)
     {
       // nie udalo sie obliczyc odwrotnosci
-      console.log(e.Message(), true);
+      console.log(e.getMessage(), true);
 
       // ustawienie flagi bledu
       isFailure = 1;

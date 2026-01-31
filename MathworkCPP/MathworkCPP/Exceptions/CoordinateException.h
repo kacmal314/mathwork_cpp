@@ -16,12 +16,11 @@ namespace MathworkCPP
   {
     class CoordinateException : public Exception
     {
-      public:
+    public:
 
-        CoordinateException();
-        CoordinateException(std::string message);
+      CoordinateException() : Exception() {};
 
-
+      CoordinateException(std::string message) : Exception(message) {};
     };
 
   }

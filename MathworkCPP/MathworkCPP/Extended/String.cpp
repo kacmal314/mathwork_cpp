@@ -1,21 +1,36 @@
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
 #include "String.h"
 
-#include <string>
-#include <vector>
-
 using namespace MathworkCPP::Extended;
+
+//*****************************************************************************
+
+//
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
+
+std::optional<char> String::shift(std::string & str)
+{
+  if (str.empty())
+  {
+    return std::nullopt;
+  }
+
+  std::optional<char> first { str.front() };
+
+  str.replace(str.begin(), str.begin() + 1, "");
+
+  return first;
+}
 
 //*****************************************************************************
 	
 ///
 /// desc
-///   std::vector contains indexes where find() succeeded
+/// 
+/// # std::vector contains indexes where find() succeeded
+/// 
 /// return
-///   std::vector
-///
+/// 
+/// # std::vector
 
 std::vector<size_t> String::findAll(std::string str, std::string pattern, int from)
 {
@@ -78,12 +93,16 @@ std::string String::removeCharacter(std::string str, char ch)
 }
 
 //*****************************************************************************
-std::string String::removeWhiteCharacters(std::string str)
+std::string String::removeWhiteCharacters(std::string const & str)
 {
   std::string ret {""};
   for (auto ch : str)
+  {
     if (! isWhiteCharacter(ch))
+    {
       ret += ch;
+    }
+  }
 
   return ret;
 

@@ -15,28 +15,22 @@ namespace MathworkCPP
   {
     class Exception
     {
-      public:
-
-        Exception();
-        Exception(std::string message);
-
-        static void                        IsErrorRaised(bool isError);
-        static bool                        IsErrorRaised();
-        static void                        IsWarningRaised(bool isWarning);
-        static bool                        IsWarningRaised();
-
-        std::string                        Message();
 
       protected:
 
-        std::string                 message;
+        std::string message;
 
-      private:
+      public:
 
-        static bool                 isErrorRaised;
-        static bool                 isWarningRaised;
+        Exception() = default;
+        Exception(std::string message) : message(message) {};
 
+        //*****************************************************************************
 
+        inline std::string getMessage()
+        {
+          return this->message;
+        }
     };
 
   }
