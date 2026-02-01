@@ -1,13 +1,17 @@
 #ifndef CONSTANTNODE_H
 #define CONSTANTNODE_H
 
-#include <string>
+
+#include "Node.h"
 
 namespace MathworkCPP
 {
-  class ConstantNode
+  class ConstantNode : public Node
   {
-    std::string data {};
+
+  public:
+
+    Node* create() override;
   };
 }
 

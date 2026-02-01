@@ -46,9 +46,9 @@ BinaryTree ExpressionParser::parse(const std::string & expressionAsString)
   
   BinaryTree localTree;
 
-  for (auto const & precedenceLevel : this->symbolArrays)
+  for (auto const & precedence : this->lookups)
   {
-    for (auto const & symbol : precedenceLevel)
+    for (auto const & symbolLookup : precedence)
     {
       // *(std::string::begin) == '('
       if (validated.front() == '(' && validated.back() == ')')
@@ -78,6 +78,8 @@ BinaryTree ExpressionParser::parse(const std::string & expressionAsString)
         {
           continue;
         }
+
+        auto const & symbol { symbolLookup.first };
 
         if (validated.substr(i, symbol.length()) == symbol)
         {

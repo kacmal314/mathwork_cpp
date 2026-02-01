@@ -1,10 +1,10 @@
-#include "ConstantNode.h"
+#include "VariableNode.h"
 
 using namespace MathworkCPP;
 
 //*****************************************************************************
 
-Node* ConstantNode::create()
+Node* VariableNode::create()
 {
-  return new ConstantNode();
+  return new VariableNode();
 }

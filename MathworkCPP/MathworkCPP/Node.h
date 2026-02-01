@@ -8,11 +8,20 @@
 //
 // used by: BinaryTree (Expression -> 1 Binary Tree -> N Nodes)
 
+#include <string>
+
 namespace MathworkCPP
 {
   class Node
   {
 
+  protected:
+
+    std::string data {};
+
+  public:
+
+    virtual Node* create() = 0;
   };
 }
 

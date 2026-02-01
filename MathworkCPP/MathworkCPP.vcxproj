@@ -152,11 +152,14 @@
     <ClCompile Include="MathworkCPP\Filesystem.cpp" />
     <ClCompile Include="MathworkCPP\Expression.cpp" />
     <ClCompile Include="MathworkCPP\ExpressionParser.cpp" />
+    <ClCompile Include="MathworkCPP\FunctionNode.cpp" />
     <ClCompile Include="MathworkCPP\HookeJeeves.cpp" />
     <ClCompile Include="MathworkCPP\Interface.cpp" />
     <ClCompile Include="MathworkCPP\Matrix.cpp" />
     <ClCompile Include="MathworkCPP\Node.cpp" />
     <ClCompile Include="MathworkCPP\NodeRule.cpp" />
+    <ClCompile Include="MathworkCPP\NullNode.cpp" />
+    <ClCompile Include="MathworkCPP\OperatorNode.cpp" />
     <ClCompile Include="MathworkCPP\Polynomial.cpp" />
     <ClCompile Include="MathworkCPP\ExpressionValidator.cpp" />
     <ClCompile Include="MathworkCPP\Number.cpp" />
@@ -171,6 +174,7 @@
     <ClCompile Include="MathworkCPP\Testing\RandomIntTest.cpp" />
     <ClCompile Include="MathworkCPP\Testing\StringTest.cpp" />
     <ClCompile Include="MathworkCPP\Testing\UnitTest.cpp" />
+    <ClCompile Include="MathworkCPP\VariableNode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MathworkCPP.h" />
@@ -198,6 +202,7 @@
     <ClInclude Include="MathworkCPP\Filesystem.h" />
     <ClInclude Include="MathworkCPP\Expression.h" />
     <ClInclude Include="MathworkCPP\ExpressionParser.h" />
+    <ClInclude Include="MathworkCPP\FunctionNode.h" />
     <ClInclude Include="MathworkCPP\Helper\declarations.h" />
     <ClInclude Include="MathworkCPP\Helper\definitions.h" />
     <ClInclude Include="MathworkCPP\Helper\macro.h" />
@@ -207,6 +212,8 @@
     <ClInclude Include="MathworkCPP\Matrix.h" />
     <ClInclude Include="MathworkCPP\Node.h" />
     <ClInclude Include="MathworkCPP\NodeRule.h" />
+    <ClInclude Include="MathworkCPP\NullNode.h" />
+    <ClInclude Include="MathworkCPP\OperatorNode.h" />
     <ClInclude Include="MathworkCPP\Polynomial.h" />
     <ClInclude Include="MathworkCPP\ExpressionValidator.h" />
     <ClInclude Include="MathworkCPP\Number.h" />
@@ -221,6 +228,7 @@
     <ClInclude Include="MathworkCPP\Testing\RandomIntTest.h" />
     <ClInclude Include="MathworkCPP\Testing\StringTest.h" />
     <ClInclude Include="MathworkCPP\Testing\UnitTest.h" />
+    <ClInclude Include="MathworkCPP\VariableNode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

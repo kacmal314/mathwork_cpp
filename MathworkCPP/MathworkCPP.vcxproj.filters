@@ -145,6 +145,18 @@
     <ClCompile Include="MathworkCPP\ConstantNode.cpp">
       <Filter>MathworkCPP</Filter>
     </ClCompile>
+    <ClCompile Include="MathworkCPP\VariableNode.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\OperatorNode.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\FunctionNode.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\NullNode.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MathworkCPP\Helper\declarations.h">
@@ -287,6 +299,18 @@
       <Filter>MathworkCPP\Testing</Filter>
     </ClInclude>
     <ClInclude Include="MathworkCPP\ConstantNode.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\VariableNode.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\OperatorNode.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\FunctionNode.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\NullNode.h">
       <Filter>MathworkCPP</Filter>
     </ClInclude>
   </ItemGroup>

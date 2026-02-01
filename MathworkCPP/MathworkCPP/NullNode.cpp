@@ -1,10 +1,10 @@
-#include "ConstantNode.h"
+#include "NullNode.h"
 
 using namespace MathworkCPP;
 
 //*****************************************************************************
 
-Node* ConstantNode::create()
+Node* NullNode::create()
 {
-  return new ConstantNode();
+  return new NullNode();
 }
