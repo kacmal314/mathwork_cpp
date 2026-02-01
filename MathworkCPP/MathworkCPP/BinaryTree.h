@@ -20,6 +20,12 @@ namespace MathworkCPP
   {
     std::vector<Node *> tree {};
 
+  public:
+
+    ~BinaryTree();
+
+    void add(Node * node);
+
   };
 }
 
