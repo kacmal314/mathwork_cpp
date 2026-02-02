@@ -21,8 +21,15 @@ namespace MathworkCPP
     std::vector<Node *> tree {};
 
   public:
+    
+    // odpali konstruktory domniemane prymitywow
+    BinaryTree() = default;
+
+    BinaryTree(BinaryTree const & tree);
 
     ~BinaryTree();
+
+    BinaryTree operator+(BinaryTree const & tree);
 
     void add(Node * node);
 

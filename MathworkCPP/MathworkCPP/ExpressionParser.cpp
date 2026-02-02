@@ -83,7 +83,20 @@ BinaryTree ExpressionParser::parse(const std::string & expressionAsString)
 
         if (validated.substr(i, symbol.length()) == symbol)
         {
-          // 
+          auto const & lookup { symbolLookup.second };
+
+          localTree.add(lookup());
+
+          // std::string::substr returns new string
+          // parse expects: std::string
+          BinaryTree leftTree   { this->parse(validated.substr(0, i)) };
+
+          // if i+1 == string length
+          // then returned is: empty ""
+          BinaryTree rightTree  { this->parse(validated.substr(i+1, std::string::npos)) };
+
+          return leftTree + localTree + rightTree;
+
         }
 
       }

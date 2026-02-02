@@ -11,6 +11,8 @@ namespace MathworkCPP
 
   public:
 
+    Node* copy() override;
+
     Node* create() override;
   };
 }

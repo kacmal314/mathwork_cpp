@@ -21,6 +21,8 @@ namespace MathworkCPP
 
   public:
 
+    virtual Node* copy() = 0;
+
     virtual Node* create() = 0;
   };
 }
