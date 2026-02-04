@@ -6,50 +6,110 @@ using namespace MathworkCPP;
 
 BinaryTree::BinaryTree(BinaryTree const & tree)
 {
-  // to nie jest potrzebne
-  // nie piszemy przeciez operatora=
-  // if (this == &tree)
 
-  this->~BinaryTree();
-
-  this->tree.reserve(tree.tree.size());
-
-  // referencja do wskaznika jest chyba niepotrzebna
-  // wskazniki wykorzystujemy zeby optymalizowac prace na duzych obiektach
-  // wspazniki nie sa duzymy obiektami: przykladowo: int* to 4 B
-  for (auto const /* & */ ptr : tree.tree)
-  {
-    this->tree.push_back(& (*ptr).copy());
-  }
+  this->copy(tree);
 }
 
 //*****************************************************************************
 
 BinaryTree::~BinaryTree()
 {
-  for (auto ptr : this->tree)
-  {
-    delete ptr;
-  }
+  this->clear();
 }
 
 //*****************************************************************************
 
-BinaryTree BinaryTree::operator+(BinaryTree const & tree)
+BinaryTree& BinaryTree::operator=(BinaryTree const & tree)
 {
-  BinaryTree newTree { *this };
-
-  for (auto const & node : tree.tree)
+  if (this == &tree)
   {
-    newTree.tree.push_back(node);
+    return *this;
   }
 
-  return newTree;
+  this->copy(tree);
+
+  return *this;
+}
+
+//*****************************************************************************
+
+BinaryTree BinaryTree::operator+(BinaryTree const & rhs)
+{
+  BinaryTree lhs { *this };
+
+  for (Node* node : rhs.tree)
+  {
+    lhs.add(node->copy());
+  }
+
+  return lhs;
+}
+
+//*****************************************************************************
+
+void BinaryTree::insert(Node* node, int i)
+{
+  // 0 - 0 + 1 = 1
+  int treeLength { i - static_cast<int>(this->tree.size()) + 1};
+
+  for (int t = 0; t < treeLength; t++)
+  {
+    this->tree.push_back(new NullNode {});
+  }
+
+  //
+  // constexpr ::at
+  // C++14 removes "const" from "constexpr"
+  //
+  // przypisanie wskaznika do wektora wskaznikow
+  this->tree.at(i) = node;
+}
+
+//*****************************************************************************
+
+void BinaryTree::clear()
+{
+  for (Node* ptr : this->tree)
+  {
+    delete ptr;
+  }
+
+  this->tree.clear();
+}
+
+//*****************************************************************************
+
+void BinaryTree::copy(BinaryTree const & tree)
+{
+  this->clear();
+
+  this->tree.reserve(tree.tree.size());
+
+  for (Node* ptr : tree.tree)
+  {
+    this->add(ptr->copy());
+  }
 }
 
 //*****************************************************************************
 
 void BinaryTree::add(Node * node)
 {
+  ///
+  /// https://en.cppreference.com/w/cpp/error/assert.html
+  ///
+  /// disabling macro-definition: #define NDEBUG
+  /// 
+  /// * before #include <cassert>
+  ///
+  /// compilation time assertion
+  /// 
+  /// * check if evaluates to a "zero" of any type
+  /// 
+  /// * yes: print to std::error and call std::abort
+  /// 
+  /// * no: nothing happens
+  assert(node != nullptr);
+
   this->tree.push_back(node);
 }

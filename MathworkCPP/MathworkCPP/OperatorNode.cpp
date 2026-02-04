@@ -4,7 +4,16 @@ using namespace MathworkCPP;
 
 //*****************************************************************************
 
-Node* OperatorNode::create()
+Node* OperatorNode::copy() const
 {
-  return new OperatorNode();
+  Node *node { new OperatorNode(*this) };
+
+  return node;
+}
+
+//*****************************************************************************
+
+Node* OperatorNode::create(std::string const & data)
+{
+  return new OperatorNode(data);
 }

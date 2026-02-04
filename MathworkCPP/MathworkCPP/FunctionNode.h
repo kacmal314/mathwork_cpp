@@ -11,7 +11,11 @@ namespace MathworkCPP
 
   public:
 
-    Node* create() override;
+    using Node::Node;
+
+    Node* copy() const override;
+
+    Node* create(std::string const & data) override;
   };
 }
 

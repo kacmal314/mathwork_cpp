@@ -10,12 +10,21 @@
 //
 // # used by Expression class
 
+#include <cassert>
 #include <vector>
 
+#include "NullNode.h"
 #include "Node.h"
 
 namespace MathworkCPP
 {
+  //-----------------------------------------------------------------------------
+
+  ///
+  /// BinaryTree owns all Node* stores in tree
+  /// 
+  /// * BinaryTree is responsible for deleting them
+
   class BinaryTree
   {
     std::vector<Node *> tree {};
@@ -29,7 +38,15 @@ namespace MathworkCPP
 
     ~BinaryTree();
 
+    BinaryTree& operator=(BinaryTree const & tree);
+
     BinaryTree operator+(BinaryTree const & tree);
+
+    void insert(Node* node, int i);
+
+    void clear();
+
+    void copy(BinaryTree const & tree);
 
     void add(Node * node);
 

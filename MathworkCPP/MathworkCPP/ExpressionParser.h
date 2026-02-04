@@ -8,11 +8,14 @@
 /// 
 /// # define expression parsing
 
+#include <regex>
 #include <map>
 #include <vector>
 #include <string>
 #include <functional> // function, unique_ptr
 
+#include "ConstantNode.h"
+#include "VariableNode.h"
 #include "FunctionNode.h"
 #include "OperatorNode.h"
 #include "Extended/String.h"
@@ -34,48 +37,30 @@ namespace MathworkCPP
   {
     // std::any_callable<return_type>
     // () -> means return type is pointer to callable function
+    
     // using factory = std::function<std::unique_ptr<Node>(void)>;
+
+    using factoryPointer = Node* (*) (std::string);
     
     // procedure pointer returning Node*
-    using mapStringFactory = std::map<std::string, Node* (*) (void)>;
+    using mapStringFactory = std::map<std::string, factoryPointer>;
 
     using precedenceLookups = std::vector<mapStringFactory>;
 
     ///
-    /// inverse precedence
+    /// precedence
     /// 
-    /// # 0: +, -
+    /// # 0: +, -   LOWEST PRECEDENCE
     /// 
-    /// # 1: *, /
+    /// # 1: *, /   HIGHER PRECEDENCE
     /// 
     /// ...
     
-    precedenceLookups lookups {
-      {
-        // () -> calls pointer to OperatorNode
-        {"+", [] (void) -> Node* { return new OperatorNode(); } },
-        {"-", [] (void) -> Node* { return new OperatorNode(); } }
-      },
-
-      {
-        {"*", [] (void) -> Node* { return new OperatorNode(); } },
-        {"/", [] (void) -> Node* { return new OperatorNode(); } }
-      },
-
-      {
-        {"/", [] (void) -> Node* { return new OperatorNode(); } }
-      },
-
-      {
-        {"sin", [] (void) -> Node* { return new FunctionNode(); } },
-        {"log", [] (void) -> Node* { return new FunctionNode(); } }
-      }
-
-    };
+    static const precedenceLookups lookups;
 
   public:
 
-    BinaryTree parse(const std::string &expressionAsString);
+    BinaryTree parse(std::string const & expressionAsString);
 
     bool is(Enumerated::ExpressionType type);
 
@@ -83,7 +68,23 @@ namespace MathworkCPP
 
   private:
 
-    std::string validate(const std::string &expressionAsString);
+    ///
+    /// returns: symbol length if found
+    /// 
+    /// * otherwise: 0
+
+    int lookupSymbol(std::string & expression,
+                      int expressionIndex,
+                      BinaryTree & tree,
+                      int treeIndex,
+                      std::string const & symbol,
+                      factoryPointer const & lookup);
+
+    void parse(std::string validatedExpression,
+               BinaryTree & tree,
+               int treeIndex = 0);
+
+    std::string validate(std::string const & expressionAsString);
 
     bool isConstant();
   };

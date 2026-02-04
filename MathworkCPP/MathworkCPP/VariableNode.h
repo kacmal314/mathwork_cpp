@@ -9,9 +9,14 @@ namespace MathworkCPP
 {
   class VariableNode : public Node
   {
+
   public:
 
-    Node* create() override;
+    using Node::Node;
+
+    Node* copy() const override;
+
+    Node* create(std::string const & data) override;
   };
 }
 

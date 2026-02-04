@@ -21,9 +21,13 @@ namespace MathworkCPP
 
   public:
 
-    virtual Node* copy() = 0;
+    Node() = default;
 
-    virtual Node* create() = 0;
+    Node(std::string const & data) : data(data) {};
+
+    virtual Node* copy() const = 0;
+
+    virtual Node* create(std::string const & data) = 0;
   };
 }
 

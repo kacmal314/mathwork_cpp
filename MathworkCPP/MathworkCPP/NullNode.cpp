@@ -4,7 +4,17 @@ using namespace MathworkCPP;
 
 //*****************************************************************************
 
-Node* NullNode::create()
+Node* NullNode::copy() const
 {
-  return new NullNode();
+  // member data initialized with proper type of zero
+  Node *node { new NullNode { *this } };
+
+  return node;
+}
+
+//*****************************************************************************
+
+Node* NullNode::create(std::string const & data)
+{
+  return new NullNode(data);
 }

@@ -11,7 +11,14 @@ namespace MathworkCPP
 
   public:
 
-    Node* create() override;
+    using Node::Node;
+
+    // this is nicely called: "virtual copy"
+    // its that Abstract Base has virtual function copy()
+    // and this allows Derived Class to deep copy elements
+    Node* copy() const override;
+
+    Node* create(std::string const & data) override;
   };
 }
 
