@@ -42,6 +42,8 @@ namespace MathworkCPP
 
     BinaryTree operator+(BinaryTree const & tree);
 
+    Node* postorder(int valueIndex);
+
     void insert(Node* node, int i);
 
     void clear();
@@ -49,6 +51,10 @@ namespace MathworkCPP
     void copy(BinaryTree const & tree);
 
     void add(Node * node);
+
+  private:
+
+    Node* postorder(int valueIndex, int nodeIndex);
 
   };
 }

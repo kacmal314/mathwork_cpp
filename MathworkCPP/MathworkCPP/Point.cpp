@@ -1,11 +1,7 @@
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+#include <stdexcept>
 
 #include "Point.h"
-
 #include "Exceptions/CoordinateMismatchException.h"
-
-#include <stdexcept>
 
 using namespace MathworkCPP;
 
@@ -16,14 +12,77 @@ Point::Point()
 }
 
 //*****************************************************************************
-Point::Point(initializerDouble init)
+
+Point::Point(vectorDouble coordinates)
 {
   int coordinatesIndex = 0;
 
-  for (initializerDoubleIterator ite = init.begin(); ite != init.end(); ite++)
+  for (vectorDouble::iterator ite = coordinates.begin(); ite != coordinates.end(); ite++)
   {
     this->coordinates[coordinatesIndex++] = *ite;
   }
+}
+
+//*****************************************************************************
+
+double& Point::operator[] (size_t index) const
+{
+  double value { this->coordinates[index] };
+
+  return value;
+}
+
+//*****************************************************************************
+
+double& Point::operator[] (size_t index)
+{
+  return this->coordinates[index];
+}
+
+//*****************************************************************************
+
+Point Point::operator- (Point point) const
+{
+	Point pointReturning;
+
+	if (this->countCoordinates() != point.countCoordinates())
+	{
+    //
+    // throw r-value not x-value
+    //
+    // compare:
+    // Exception::CoordinateException myException = Exception::CoordinateException();
+    // throw myException
+    throw Exceptions::CoordinateMismatchException();
+	}
+
+	for (int i = 0; i < this->countCoordinates(); i++)
+  {
+    pointReturning.addCoordinate(this->coordinates[i] - point.coordinates[i]);
+  }
+
+	return pointReturning;
+
+}
+
+//*****************************************************************************
+
+Point Point::operator+ (Point point) const
+{
+	Point pointReturning;
+
+	if (this->countCoordinates() != point.countCoordinates())
+	{
+    throw Exceptions::CoordinateMismatchException();
+	}
+
+	for (int i = 0; i < this->countCoordinates(); i++)
+  {
+    pointReturning.addCoordinate(this->coordinates[i] + point.coordinates[i]);
+  }
+
+	return pointReturning;
+
 }
 
 //*****************************************************************************
@@ -62,72 +121,21 @@ void Point::constrain(vectorDouble starts, vectorDouble stops)
 }
 
 //*****************************************************************************
-vectorDouble Point::getCoordinates()
+vectorDouble Point::copyCoordinates()
 {
 	return coordinates;
-
 }
 
 //*****************************************************************************
 void Point::setCoordinate(int index, double value)
 {
 	coordinates[index] = value;
-
 }
 
 //*****************************************************************************
-Point Point::operator- (Point point)
-{
-	Point pointReturning;
-
-	if (this->countCoordinates() != point.countCoordinates())
-	{
-    // throw r-value
-    // not throw l-value
-    throw Exceptions::CoordinateMismatchException();
-    // compare:
-    //   Exception::CoordinateException myException = Exception::CoordinateException();
-    //   throw myException
-	}
-
-	for (int i = 0; i < this->countCoordinates(); i++)
-  {
-    pointReturning.addCoordinate(this->coordinates[i] - point.coordinates[i]);
-  }
-
-	return pointReturning;
-
-}
-
-//*****************************************************************************
-Point Point::operator+ (Point point)
-{
-	Point pointReturning;
-
-	if (this->countCoordinates() != point.countCoordinates())
-	{
-    // throw r-value
-    // not throw l-value
-    throw Exceptions::CoordinateMismatchException();
-    // compare:
-    //   Exception::CoordinateException myException = Exception::CoordinateException();
-    //   throw myException
-	}
-
-	for (int i = 0; i < this->countCoordinates(); i++)
-  {
-    pointReturning.addCoordinate(this->coordinates[i] + point.coordinates[i]);
-  }
-
-	return pointReturning;
-
-}
-
-//*****************************************************************************
-int Point::countCoordinates()
+int Point::countCoordinates() const
 {
 	return coordinates.size();
-
 }
 
 //*****************************************************************************
@@ -144,20 +152,7 @@ void Point::removeCoordinate(int index)
 }
 
 //*****************************************************************************
-double Point::getCoordinate(int index)
-{
-	if (index > coordinates.size())
-	{
-    throw std::out_of_range("");
-	}
-
-	return this->coordinates[index];
-
-}
-
-//*****************************************************************************
 void Point::addCoordinate(double coord)
 {
 	coordinates.push_back(coord);
-
 }

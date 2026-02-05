@@ -12,7 +12,7 @@
 
 #include "ExpressionParser.h"
 #include "BinaryTree.h"
-#include "Point.h"
+#include "NamedPoint.h"
 
 namespace MathworkCPP
 {
@@ -32,7 +32,7 @@ namespace MathworkCPP
     Expression() = default;
     Expression(std::string const & expressionAsString);
 
-    virtual double evaluate(Point X);
+    virtual double evaluate(NamedPoint variables);
 
   };
 

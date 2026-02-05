@@ -47,6 +47,59 @@ BinaryTree BinaryTree::operator+(BinaryTree const & rhs)
 
 //*****************************************************************************
 
+Node* BinaryTree::postorder(int valueIndex)
+{
+  return this->postorder(valueIndex, 0);
+}
+
+//*****************************************************************************
+
+///
+/// valueIndex
+/// 
+/// * 0: means first postorder value found is returned
+/// 
+/// * 1: means second postorder value found is returned
+/// 
+/// * n: means nth postorder value found is returned
+
+Node* BinaryTree::postorder(int valueIndex, int nodeIndex)
+{
+  static int valueIndex_ {};
+
+  if (nodeIndex >= this->tree.size())
+  {
+    // tree: out of range
+
+    return nullptr;
+  }
+
+  if (nodeIndex == 0)
+  {
+    // initialization
+
+    valueIndex_ = valueIndex;
+  }
+  
+  Node* l_value {this->postorder(valueIndex, 2 * nodeIndex + 1)}; // L
+  Node* r_value {this->postorder(valueIndex, 2 * nodeIndex + 2)}; // R
+
+  if (valueIndex_ == 0)
+  {
+    return this->tree.at(nodeIndex); // V;
+  }
+
+  // searching for 1st element: index 0
+  // then: 0 -> -1
+  valueIndex_--;
+
+  // both l_value and r_value may be nullptr
+  // it is ok: r_value (nullptr) will be returned
+  return l_value != nullptr ? l_value : r_value;
+}
+
+//*****************************************************************************
+
 void BinaryTree::insert(Node* node, int i)
 {
   // 0 - 0 + 1 = 1

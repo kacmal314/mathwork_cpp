@@ -25,7 +25,7 @@ void Testing::ExpressionTest::test() /* override - tutaj juz nie dajesz */
   Expression parenth { "(2 + 2)* 2" };    // [* + 2 2 2]
   Expression sinefun { "(sin(x))^2*2" };  // [* ^ 2 sin 2 null x]
 
-  //squared.evaluate({{"z", 4}, {"y", 8}});   // double(80)
-  //parenth.evaluate();                       // double(8)
-  //sinefun.evaluate({{"x", 3.14}});          // double(0.00600080060054297305308321210152)
+  squared.evaluate({{"z", 4}, {"y", 8}});   // double(80)
+  parenth.evaluate();                       // double(8)
+  sinefun.evaluate({{"x", 3.14}});          // double(0.00600080060054297305308321210152)
 }

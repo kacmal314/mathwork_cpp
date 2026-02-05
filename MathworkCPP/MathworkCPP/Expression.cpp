@@ -10,7 +10,9 @@ Expression::Expression(std::string const & expressionAsString)
 
 //*****************************************************************************
 
-double Expression::evaluate(Point X)
+double Expression::evaluate(NamedPoint variables)
 {
+  this->expressionAsTree.postorder(2); // x
+
   return 0;
 }

@@ -178,7 +178,7 @@ void HookeJeeves::explore(Point patternPoint)
   for ( int i = 0; i < pointNow.countCoordinates(); i++ ) // each x, y, z, ..
   {
     // prepare P+
-    pointPlus.setCoordinate(i, pointPlus.getCoordinate(i) + delta);
+    pointPlus.setCoordinate(i, pointPlus[i] + delta);
     // compute f+
     double fPlus = polynomial->evaluate(pointPlus);
 
@@ -186,7 +186,7 @@ void HookeJeeves::explore(Point patternPoint)
     double fZero = polynomial->evaluate(pointZero);
 
     // prepare P-
-    pointNegative.setCoordinate(i, pointNegative.getCoordinate(i) - delta);
+    pointNegative.setCoordinate(i, pointNegative[i] - delta);
     // compute f-
     double fNegative = polynomial->evaluate(pointNegative);
 

@@ -81,9 +81,9 @@ double Polynomial::degree()
 }
 
 //*****************************************************************************
-double Polynomial::evaluate(Point X)
+double Polynomial::evaluate(Point point)
 {
-  if (X.countCoordinates() != countVariables())
+  if (point.countCoordinates() != countVariables())
   {
     throw Exceptions::CoordinateMismatchException();
   }
@@ -98,7 +98,7 @@ double Polynomial::evaluate(Point X)
     double expression = coefficients[index];
 
     // account for each Argument primitive (x, y, z, ..)
-    for (int i = 0; i < X.countCoordinates(); i++)
+    for (int i = 0; i < point.countCoordinates(); i++)
     {
       // std::optional::operator!
       if ( ! powers[index][i] )
@@ -107,14 +107,14 @@ double Polynomial::evaluate(Point X)
       }
 
       // EG if -0.5^0.5 = sqrt(-0.5)
-      if (X.getCoordinate(i) < 0 &&
+      if (point[i] < 0 &&
           powers[index][i] != (int)powers[index][i])
       {
         throw Exceptions::Exception("cmath pow(double, double) doesnt support complex numbers");
       }
 
       // double * double
-      expression *= std::pow(X.getCoordinate(i), powers[index][i]);
+      expression *= std::pow(point[i], powers[index][i]);
 
     }
 

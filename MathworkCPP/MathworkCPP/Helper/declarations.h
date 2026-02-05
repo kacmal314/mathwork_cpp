@@ -29,6 +29,9 @@ using pairCharBool 	= std::pair<char, bool>;      // C++ doesnt provide primitiv
 using mapCharString 	= std::map<char, std::string>;
 using pairCharString 	= std::pair<char, std::string>;
 
+using mapStringDouble 	= std::map<std::string, double>;
+using pairStringDouble 	= std::pair<std::string, double>;
+
 using mapStringString 	= std::map<std::string, std::string>;
 using pairStringString 	= std::pair<std::string, std::string>;
 

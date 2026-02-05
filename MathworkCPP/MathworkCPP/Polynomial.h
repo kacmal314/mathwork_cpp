@@ -51,7 +51,7 @@ namespace MathworkCPP
 
       double degree();
 
-      double evaluate(Point X) override;
+      double evaluate(Point point);
 
       std::string getVariableNames();
 

@@ -157,6 +157,9 @@
     <ClCompile Include="MathworkCPP\NullNode.cpp">
       <Filter>MathworkCPP</Filter>
     </ClCompile>
+    <ClCompile Include="MathworkCPP\NamedPoint.cpp">
+      <Filter>MathworkCPP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MathworkCPP\Helper\declarations.h">
@@ -311,6 +314,9 @@
       <Filter>MathworkCPP</Filter>
     </ClInclude>
     <ClInclude Include="MathworkCPP\NullNode.h">
+      <Filter>MathworkCPP</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\NamedPoint.h">
       <Filter>MathworkCPP</Filter>
     </ClInclude>
   </ItemGroup>

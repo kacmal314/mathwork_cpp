@@ -1,4 +1,5 @@
-#pragma once
+#ifndef POINT_H
+#define POINT_H
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -16,26 +17,30 @@ namespace MathworkCPP
 
 	class Point
 	{
+		protected:
+
+			vectorDouble coordinates;
+
 		public:
 
       Point();
-      Point(initializerDouble init);
+      Point(vectorDouble coordinates);
+      
+      // when object is constant
+			double& operator[] (size_t index) const;
+			double& operator[] (size_t index);
+			Point operator- (Point point) const;
+			Point operator+ (Point point) const;
 
-			void                constrain(vectorDouble starts, vectorDouble stops);
-			vectorDouble        getCoordinates();
-			void                setCoordinate(int index, double value);
-			Point               operator- (Point point);
-			Point               operator+ (Point point);
-			int            			countCoordinates();
-			void                removeCoordinate(int index);
-			double            	getCoordinate(int index);
-			void                addCoordinate(double coord);
-
-		private:
-
-			vectorDouble        coordinates;
+			void constrain(vectorDouble starts, vectorDouble stops);
+			vectorDouble copyCoordinates();
+			int countCoordinates() const;
+			void removeCoordinate(int index);
+      void setCoordinate(int index, double value);
+			void addCoordinate(double coord);
 
 	};
 	
 }
 
+#endif // POINT_H

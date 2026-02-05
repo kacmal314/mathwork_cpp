@@ -156,6 +156,7 @@
     <ClCompile Include="MathworkCPP\HookeJeeves.cpp" />
     <ClCompile Include="MathworkCPP\Interface.cpp" />
     <ClCompile Include="MathworkCPP\Matrix.cpp" />
+    <ClCompile Include="MathworkCPP\NamedPoint.cpp" />
     <ClCompile Include="MathworkCPP\Node.cpp" />
     <ClCompile Include="MathworkCPP\NodeRule.cpp" />
     <ClCompile Include="MathworkCPP\NullNode.cpp" />
@@ -210,6 +211,7 @@
     <ClInclude Include="MathworkCPP\HookeJeeves.h" />
     <ClInclude Include="MathworkCPP\Interface.h" />
     <ClInclude Include="MathworkCPP\Matrix.h" />
+    <ClInclude Include="MathworkCPP\NamedPoint.h" />
     <ClInclude Include="MathworkCPP\Node.h" />
     <ClInclude Include="MathworkCPP\NodeRule.h" />
     <ClInclude Include="MathworkCPP\NullNode.h" />
