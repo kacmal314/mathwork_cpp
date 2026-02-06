@@ -319,5 +319,8 @@
     <ClInclude Include="MathworkCPP\NamedPoint.h">
       <Filter>MathworkCPP</Filter>
     </ClInclude>
+    <ClInclude Include="MathworkCPP\Enumerated\NodeType.h">
+      <Filter>MathworkCPP\Enumerated</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

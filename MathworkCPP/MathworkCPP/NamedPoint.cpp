@@ -4,16 +4,13 @@ using namespace MathworkCPP;
 
 //*****************************************************************************
 
-NamedPoint::NamedPoint(mapStringDouble point)
+NamedPoint::NamedPoint(initializerPairStringDouble point)
 {
-  int coordinatesIndex = 0;
-
-  for (mapStringDouble::iterator ite = point.begin(); ite != point.end(); ite++)
+  initializerPairStringDouble::iterator ite = point.begin();
+  for (; ite != point.end(); ite++)
   {
-    this->names[coordinatesIndex] = ite->second;
-    this->coordinates[coordinatesIndex] = ite->second;
-
-    coordinatesIndex++;
+    this->names.push_back(ite->first);
+    this->coordinates.push_back(ite->second);
   }
 }
 

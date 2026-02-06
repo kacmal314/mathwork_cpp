@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CONVERT_H
+#define CONVERT_H
 
 #include "Convert.h"
 
@@ -72,3 +73,5 @@ vectorDouble Convert::toArrayDouble(vectorComplexDouble complexArray, bool isRea
 
   return doubles;
 }
+
+#endif // CONVERT_H

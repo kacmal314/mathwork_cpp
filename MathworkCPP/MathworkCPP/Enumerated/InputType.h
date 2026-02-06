@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ENUMERATED_INPUTTYPE_H
+#define ENUMERATED_INPUTTYPE_H
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -12,7 +13,7 @@ namespace MathworkCPP
   namespace Enumerated
   {
     //-----------------------------------------------------------------------------
-    enum class InputType : int
+    enum class InputType : unsigned int
     {
       None = 1,
       Number
@@ -21,3 +22,5 @@ namespace MathworkCPP
   }
 
 }
+
+#endif // ENUMERATED_INPUTTYPE_H

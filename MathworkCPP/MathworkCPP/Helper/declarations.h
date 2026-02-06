@@ -1,4 +1,5 @@
-#pragma once
+#ifndef HELPER_DECLARATIONS_H
+#define HELPER_DECLARATIONS_H
 
 #include <complex>
 #include <initializer_list>
@@ -20,6 +21,8 @@ namespace MathworkCPP { namespace Extended {} }
 //
 
 using complexDouble  	= std::complex<double>;
+
+using NodeTypeType = unsigned int;
 
 using mapCharBool  	= std::map<char, bool>;       // variables in expressions may be null - non-existing
 using pairCharBool 	= std::pair<char, bool>;      // C++ doesnt provide primitive null datatypes
@@ -52,8 +55,9 @@ using vector2Int = std::vector<vectorInt>;
 using vectorComplexDouble = std::vector<complexDouble>;
 
 using initializerDouble = std::initializer_list<double>;
-using initializerNullableDouble = std::initializer_list<nullableDouble>;
 using initializerDoubleIterator = std::initializer_list<double>::iterator;
+using initializerNullableDouble = std::initializer_list<nullableDouble>;
+using initializerPairStringDouble = std::initializer_list<pairStringDouble>;
 using initializerVectorDouble = std::initializer_list<vectorDouble>;
 
 //
@@ -65,3 +69,5 @@ using initializerVectorDouble = std::initializer_list<vectorDouble>;
 #define DEBUG 3
 
 #define MODE RUNTIME
+
+#endif // HELPER_DECLARATIONS_H

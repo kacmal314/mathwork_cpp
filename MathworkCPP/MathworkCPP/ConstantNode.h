@@ -1,13 +1,16 @@
 #ifndef CONSTANTNODE_H
 #define CONSTANTNODE_H
 
-
 #include "Node.h"
 
 namespace MathworkCPP
 {
   class ConstantNode : public Node
   {
+
+  protected:
+
+    NodeTypeType code { static_cast<NodeTypeType>(Enumerated::NodeType::Constant) };
 
   public:
 
@@ -16,6 +19,7 @@ namespace MathworkCPP
     Node* copy() const override;
 
     Node* create(std::string const & data) override;
+
   };
 }
 

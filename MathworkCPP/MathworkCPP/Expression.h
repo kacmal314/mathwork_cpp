@@ -10,6 +10,7 @@
 
 #include <string>
 
+#include "Node.h"
 #include "ExpressionParser.h"
 #include "BinaryTree.h"
 #include "NamedPoint.h"
@@ -32,7 +33,7 @@ namespace MathworkCPP
     Expression() = default;
     Expression(std::string const & expressionAsString);
 
-    virtual double evaluate(NamedPoint variables);
+    virtual double evaluate(NamedPoint variables = {});
 
   };
 

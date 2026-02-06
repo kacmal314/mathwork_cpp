@@ -23,7 +23,7 @@ namespace MathworkCPP
 
 		public:
 
-      Point();
+      Point() = default;
       Point(vectorDouble coordinates);
       
       // when object is constant

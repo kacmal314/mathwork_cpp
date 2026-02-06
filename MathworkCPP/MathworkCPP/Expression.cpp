@@ -12,7 +12,25 @@ Expression::Expression(std::string const & expressionAsString)
 
 double Expression::evaluate(NamedPoint variables)
 {
-  this->expressionAsTree.postorder(2); // x
+  BinaryTree resolvedTree { this->resolveVariables(this->expressionAsTree) };
 
-  return 0;
+  int nodesCount { resolvedTree.countNodes() };
+
+  // https://en.wikipedia.org/wiki/Reverse_Polish_notation
+
+  Node::vectorNodep postfixArray {};
+
+  for (int i = 0; i < nodesCount; i++)
+  {
+    auto const & nodep { resolvedTree.postorder(i) };
+
+    if (nodep->isFunctional())
+    {
+      nodep->evaluate(postfixArray);
+    }
+  }
+
+  Node* first { postfixArray.front() };
+
+  return std::stod(first->copyData());
 }

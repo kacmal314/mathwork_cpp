@@ -6,20 +6,12 @@
 using namespace MathworkCPP;
 
 //*****************************************************************************
-Point::Point()
-{
-
-}
-
-//*****************************************************************************
 
 Point::Point(vectorDouble coordinates)
 {
-  int coordinatesIndex = 0;
-
   for (vectorDouble::iterator ite = coordinates.begin(); ite != coordinates.end(); ite++)
   {
-    this->coordinates[coordinatesIndex++] = *ite;
+    this->coordinates.push_back(*ite);
   }
 }
 

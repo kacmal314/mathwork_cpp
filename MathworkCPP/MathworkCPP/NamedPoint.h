@@ -11,6 +11,7 @@
 /// # shadow Point member functions
 
 #include "Helper/declarations.h"
+#include "Convert.h"
 #include "Point.h"
 
 namespace MathworkCPP
@@ -29,7 +30,7 @@ namespace MathworkCPP
     using Point::setCoordinate;
     using Point::operator[];
 
-    NamedPoint(mapStringDouble point = {});
+    NamedPoint(initializerPairStringDouble point = {});
     
 		double& operator[] (std::string name) const;
 		double& operator[] (std::string name);

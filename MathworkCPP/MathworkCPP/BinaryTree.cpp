@@ -1,5 +1,7 @@
 #include "BinaryTree.h"
 
+// if cannot find in global
+// look inside: Enumerated
 using namespace MathworkCPP;
 
 //*****************************************************************************
@@ -47,6 +49,27 @@ BinaryTree BinaryTree::operator+(BinaryTree const & rhs)
 
 //*****************************************************************************
 
+int BinaryTree::countNodes()
+{
+  int nodesCount {};
+
+  for (int i = 0; i < this->tree.size(); i++)
+  {
+    auto const & node { * this->tree.at(i) };
+
+    // creating tmp object
+    if ( ! node.isNull() )
+    {
+      nodesCount++;
+    }
+    
+  }
+
+  return nodesCount;
+}
+
+//*****************************************************************************
+
 Node* BinaryTree::postorder(int valueIndex)
 {
   return this->postorder(valueIndex, 0);
@@ -67,35 +90,43 @@ Node* BinaryTree::postorder(int valueIndex, int nodeIndex)
 {
   static int valueIndex_ {};
 
-  if (nodeIndex >= this->tree.size())
-  {
-    // tree: out of range
-
-    return nullptr;
-  }
-
   if (nodeIndex == 0)
   {
     // initialization
 
     valueIndex_ = valueIndex;
   }
-  
-  Node* l_value {this->postorder(valueIndex, 2 * nodeIndex + 1)}; // L
-  Node* r_value {this->postorder(valueIndex, 2 * nodeIndex + 2)}; // R
 
-  if (valueIndex_ == 0)
+  if (nodeIndex >= this->tree.size())
   {
-    return this->tree.at(nodeIndex); // V;
-  }
+    // tree: out of range
 
-  // searching for 1st element: index 0
-  // then: 0 -> -1
-  valueIndex_--;
+    return nullptr;
+  }
+  
+  Node* l_node {this->postorder(valueIndex, 2 * nodeIndex + 1)}; // L
+  Node* r_node {this->postorder(valueIndex, 2 * nodeIndex + 2)}; // R
+
+  auto const & currentNode { this->tree.at(nodeIndex) };
+
+  if ( ! currentNode->isNull())
+  {
+
+    if (valueIndex_ == 0)
+    {
+      valueIndex_--;
+      return currentNode; // V
+    }
+
+    // searching for 1st element: index 0
+    // then: 0 -> -1
+    valueIndex_--;
+  
+  }
 
   // both l_value and r_value may be nullptr
   // it is ok: r_value (nullptr) will be returned
-  return l_value != nullptr ? l_value : r_value;
+  return l_node != nullptr ? l_node : r_node;
 }
 
 //*****************************************************************************

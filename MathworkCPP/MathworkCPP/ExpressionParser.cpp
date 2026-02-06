@@ -2,8 +2,6 @@
 
 using namespace MathworkCPP;
 
-
-
 const ExpressionParser::precedenceLookups ExpressionParser::lookups {
   {
     // () -> calls pointer to OperatorNode

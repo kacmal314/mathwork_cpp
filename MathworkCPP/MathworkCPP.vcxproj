@@ -187,6 +187,7 @@
     <ClInclude Include="MathworkCPP\Convert.h" />
     <ClInclude Include="MathworkCPP\Enumerated\ExpressionType.h" />
     <ClInclude Include="MathworkCPP\Enumerated\InputType.h" />
+    <ClInclude Include="MathworkCPP\Enumerated\NodeType.h" />
     <ClInclude Include="MathworkCPP\Exceptions\CoordinateException.h" />
     <ClInclude Include="MathworkCPP\Exceptions\CoordinateMismatchException.h" />
     <ClInclude Include="MathworkCPP\Exceptions\Exception.h" />

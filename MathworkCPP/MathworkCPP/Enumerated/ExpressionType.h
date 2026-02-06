@@ -11,7 +11,7 @@ namespace MathworkCPP
   namespace Enumerated
   {
     //-----------------------------------------------------------------------------
-    enum class ExpressionType : int
+    enum class ExpressionType : unsigned int
     {
       // EG: 0
       Constant = 0x0,

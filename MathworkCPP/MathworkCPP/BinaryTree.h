@@ -10,6 +10,7 @@
 //
 // # used by Expression class
 
+#include <typeinfo>
 #include <cassert>
 #include <vector>
 
@@ -41,6 +42,8 @@ namespace MathworkCPP
     BinaryTree& operator=(BinaryTree const & tree);
 
     BinaryTree operator+(BinaryTree const & tree);
+
+    int countNodes();
 
     Node* postorder(int valueIndex);
 
