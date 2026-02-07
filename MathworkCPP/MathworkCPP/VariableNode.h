@@ -10,13 +10,18 @@ namespace MathworkCPP
   class VariableNode : public Node
   {
 
-  protected:
-
-    NodeTypeType code { static_cast<NodeTypeType>(Enumerated::NodeType::Variable) };
-
   public:
 
+    // this adds visibility of Base::Base constructors
+
     using Node::Node;
+
+    //*****************************************************************************
+
+    VariableNode(std::string const & data) : Node(data)
+    {
+      this->code = static_cast<NodeTypeType>(Enumerated::NodeType::Variable);
+    };
 
     Node* copy() const override;
 

@@ -7,6 +7,22 @@ using namespace MathworkCPP;
 
 //*****************************************************************************
 
+vectorDouble Convert::toVectorDouble(Node::vectorNodep nodep)
+{
+  vectorDouble argumentsAsDouble {};
+
+  for (int i = 0; i < nodep.size(); i++)
+  {
+    std::string argument { nodep[i]->copyData() };
+
+    argumentsAsDouble.push_back(std::stod(argument));
+  }
+
+  return argumentsAsDouble;
+}
+
+//*****************************************************************************
+
 vectorDouble Convert::toNotNull(vectorNullableDouble nullables)
 {
   vectorDouble doubles {};

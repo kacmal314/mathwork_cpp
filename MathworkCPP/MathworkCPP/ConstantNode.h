@@ -8,13 +8,16 @@ namespace MathworkCPP
   class ConstantNode : public Node
   {
 
-  protected:
-
-    NodeTypeType code { static_cast<NodeTypeType>(Enumerated::NodeType::Constant) };
-
   public:
 
     using Node::Node;
+
+    //*****************************************************************************
+
+    ConstantNode(std::string const & data) : Node(data)
+    {
+      this->code = static_cast<NodeTypeType>(Enumerated::NodeType::Constant);
+    };
 
     Node* copy() const override;
 

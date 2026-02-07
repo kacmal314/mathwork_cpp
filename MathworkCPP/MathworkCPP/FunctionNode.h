@@ -11,15 +11,18 @@ namespace MathworkCPP
   class FunctionNode : public Node
   {
 
-  protected:
-
-    NodeTypeType code { static_cast<NodeTypeType>(Enumerated::NodeType::Function) };
-
-    int argumentCount { 1 };
-
   public:
 
     using Node::Node;
+
+    //*****************************************************************************
+
+    FunctionNode(std::string const & data) : Node(data)
+    {
+      this->code = static_cast<NodeTypeType>(Enumerated::NodeType::Function);
+
+      this->argumentCount = 1;
+    };
 
     Node* copy() const override;
 

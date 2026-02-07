@@ -14,6 +14,7 @@
 #include <cassert>
 #include <vector>
 
+#include "Exceptions/NodeNotFound.h"
 #include "NullNode.h"
 #include "Node.h"
 
@@ -42,6 +43,11 @@ namespace MathworkCPP
     BinaryTree& operator=(BinaryTree const & tree);
 
     BinaryTree operator+(BinaryTree const & tree);
+
+    Node* & operator[](int i);
+    Node* & operator[](int i) const;
+
+    int find(Node* node) const;
 
     int countNodes();
 

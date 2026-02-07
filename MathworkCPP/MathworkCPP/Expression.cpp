@@ -10,9 +10,35 @@ Expression::Expression(std::string const & expressionAsString)
 
 //*****************************************************************************
 
+BinaryTree Expression::resolveVariables(NamedPoint const & variables)
+{
+  BinaryTree tree { this->expressionAsTree };
+
+  int nodesCount { tree.countNodes() };
+
+  for (int i = 0; i < nodesCount; i++)
+  {
+    Node* nodep { tree.postorder(i) };
+
+    if (nodep->isVariable())
+    {
+      std::string variable { nodep->copyData() };
+
+      std::string constant = std::to_string(variables[variable]);
+
+      tree[tree.find(nodep)] = new ConstantNode { constant };
+
+    }
+  }
+
+  return tree;
+}
+
+//*****************************************************************************
+
 double Expression::evaluate(NamedPoint variables)
 {
-  BinaryTree resolvedTree { this->resolveVariables(this->expressionAsTree) };
+  BinaryTree resolvedTree { this->resolveVariables(variables) };
 
   int nodesCount { resolvedTree.countNodes() };
 
@@ -27,7 +53,10 @@ double Expression::evaluate(NamedPoint variables)
     if (nodep->isFunctional())
     {
       nodep->evaluate(postfixArray);
+      continue;
     }
+
+    postfixArray.push_back(nodep);
   }
 
   Node* first { postfixArray.front() };

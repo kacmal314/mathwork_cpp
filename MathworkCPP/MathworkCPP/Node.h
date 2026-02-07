@@ -8,10 +8,12 @@
 //
 // used by: BinaryTree (Expression -> 1 Binary Tree -> N Nodes)
 
+#include <map>
 #include <functional> // std::function
 #include <typeinfo>
 #include <string>
 
+#include "Exceptions/NodeNotEvaluable.h"
 #include "Helper/declarations.h"
 #include "Enumerated/NodeType.h"
 
@@ -32,9 +34,22 @@ namespace MathworkCPP
 
   protected:
 
-    using evaluationLookups = std::function<double(vectorDouble)>;
+    using evaluationLookup = std::function<double(vectorDouble)>;
 
-    static const evaluationLookups lookups;
+    using mapStringLookup = std::map<std::string, evaluationLookup>;
+
+    ///
+    /// interface member data
+    /// 
+    /// * static member belong to Base Class
+    /// 
+    /// * shadow it in Derived Class
+    /// 
+    /// no memory address
+    /// 
+    /// * unless shadowed in Derived Class and defined in .cpp
+
+    static const mapStringLookup lookups;
 
     std::string data {};
 
@@ -44,7 +59,9 @@ namespace MathworkCPP
 
   public:
 
-    Node() {};
+    //*****************************************************************************
+
+    Node() : Node("") {};
 
     //*****************************************************************************
 
@@ -58,6 +75,15 @@ namespace MathworkCPP
     /// * problem: circular dependency
     
     bool isNull() const;
+
+    ///
+    /// const this
+    /// 
+    /// * "I promise I keep this pointer const"
+    /// 
+    /// * NOT: "I only accept const pointers"
+
+    bool isVariable() const;
 
     bool isOperator() const;
 
@@ -74,7 +100,22 @@ namespace MathworkCPP
 
     //*****************************************************************************
 
+    virtual double evaluateFor(vectorDouble arguments) const
+    {
+      throw Exceptions::NodeNotEvaluable("this node cannot be simplified");
+    };
+
+    //*****************************************************************************
+
     virtual void evaluate(vectorNodep & postfixArray) { return; };
+
+    //*****************************************************************************
+
+    std::string copyData() const { return this->data; }
+
+    //*****************************************************************************
+
+    NodeTypeType copyCode() const { return this->code; }
   };
 }
 

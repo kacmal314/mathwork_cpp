@@ -5,8 +5,12 @@
 
 ///
 /// InputType
+///
 /// # models interface input type
+///
 /// # models user interface input type
+
+#include "../Helper/declarations.h"
 
 namespace MathworkCPP
 {

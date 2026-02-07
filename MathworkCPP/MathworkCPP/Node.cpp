@@ -15,7 +15,7 @@ Node::vectorNodep Node::shiftArguments(vectorNodep & postfixArray)
 
   auto values { std::vector(iterator, postfixArray.end()) };
 
-  postfixArray.erase(iterator);
+  postfixArray.erase(iterator, postfixArray.end());
 
   return values;
 }
@@ -25,6 +25,13 @@ Node::vectorNodep Node::shiftArguments(vectorNodep & postfixArray)
 bool Node::isNull() const
 {
   return typeid(*this) == typeid(NullNode {});
+}
+
+//*****************************************************************************
+
+bool Node::isVariable() const
+{
+  return typeid(*this) == typeid(VariableNode {});
 }
 
 //*****************************************************************************

@@ -141,6 +141,8 @@
     <ClCompile Include="MathworkCPP\Exceptions\Exception.cpp" />
     <ClCompile Include="MathworkCPP\Exceptions\IterationLimitException.cpp" />
     <ClCompile Include="MathworkCPP\Exceptions\MatrixSizeException.cpp" />
+    <ClCompile Include="MathworkCPP\Exceptions\NodeNotEvaluable.cpp" />
+    <ClCompile Include="MathworkCPP\Exceptions\NodeNotFound.cpp" />
     <ClCompile Include="MathworkCPP\Exceptions\ParserException.cpp" />
     <ClCompile Include="MathworkCPP\Exceptions\PolynomialDegreeException.cpp" />
     <ClCompile Include="MathworkCPP\Exceptions\PowerException.cpp" />
@@ -193,6 +195,8 @@
     <ClInclude Include="MathworkCPP\Exceptions\Exception.h" />
     <ClInclude Include="MathworkCPP\Exceptions\IterationLimitException.h" />
     <ClInclude Include="MathworkCPP\Exceptions\MatrixSizeException.h" />
+    <ClInclude Include="MathworkCPP\Exceptions\NodeNotEvaluable.h" />
+    <ClInclude Include="MathworkCPP\Exceptions\NodeNotFound.h" />
     <ClInclude Include="MathworkCPP\Exceptions\ParserException.h" />
     <ClInclude Include="MathworkCPP\Exceptions\PolynomialDegreeException.h" />
     <ClInclude Include="MathworkCPP\Exceptions\PowerException.h" />

@@ -160,6 +160,12 @@
     <ClCompile Include="MathworkCPP\NamedPoint.cpp">
       <Filter>MathworkCPP</Filter>
     </ClCompile>
+    <ClCompile Include="MathworkCPP\Exceptions\NodeNotFound.cpp">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="MathworkCPP\Exceptions\NodeNotEvaluable.cpp">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MathworkCPP\Helper\declarations.h">
@@ -321,6 +327,12 @@
     </ClInclude>
     <ClInclude Include="MathworkCPP\Enumerated\NodeType.h">
       <Filter>MathworkCPP\Enumerated</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Exceptions\NodeNotFound.h">
+      <Filter>MathworkCPP\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MathworkCPP\Exceptions\NodeNotEvaluable.h">
+      <Filter>MathworkCPP\Exceptions</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

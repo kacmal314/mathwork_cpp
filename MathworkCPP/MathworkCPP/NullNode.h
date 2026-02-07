@@ -8,13 +8,16 @@ namespace MathworkCPP
   class NullNode : public Node
   {
 
-  protected:
-
-    NodeTypeType code { static_cast<NodeTypeType>(Enumerated::NodeType::Null) };
-
   public:
 
     using Node::Node;
+
+    //*****************************************************************************
+
+    NullNode(std::string const & data) : Node(data)
+    {
+      this->code = static_cast<NodeTypeType>(Enumerated::NodeType::Null);
+    };
 
     // this is nicely called: "virtual copy"
     // its that Abstract Base has virtual function copy()

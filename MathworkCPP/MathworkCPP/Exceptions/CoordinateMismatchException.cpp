@@ -1,4 +1,3 @@
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #include "CoordinateMismatchException.h"
 
 #include <string>

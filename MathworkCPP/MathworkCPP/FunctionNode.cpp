@@ -8,9 +8,9 @@ void FunctionNode::evaluate(Node::vectorNodep & postfixArray)
 {
   Node::vectorNodep arguments { this->shiftArguments(postfixArray) };
 
-  Node* value { this->lookup(this->data) };
+  //Node* value { this->lookup(this->data) };
 
-  postfixArray.push_back(value);
+  //postfixArray.push_back(value);
 }
 
 //*****************************************************************************

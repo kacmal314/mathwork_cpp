@@ -8,7 +8,6 @@ using namespace MathworkCPP;
 
 BinaryTree::BinaryTree(BinaryTree const & tree)
 {
-
   this->copy(tree);
 }
 
@@ -17,6 +16,42 @@ BinaryTree::BinaryTree(BinaryTree const & tree)
 BinaryTree::~BinaryTree()
 {
   this->clear();
+}
+
+//*****************************************************************************
+
+Node* & BinaryTree::operator[](int i)
+{
+  return this->tree.at(i);
+}
+
+//*****************************************************************************
+
+
+Node* & BinaryTree::operator[](int i) const
+{
+  // define: new pointer
+  Node* node { this->tree.at(i) };
+  return node;
+}
+
+//*****************************************************************************
+
+int BinaryTree::find(Node* node) const
+{
+  size_t size_ { this->tree.size() };
+
+  for (size_t i = 0; i < size_; i++)
+  {
+    if (node == this->tree[i])
+    {
+      // these POINTERS are the same (their addresses)
+
+      return i;
+    }
+  }
+
+  throw Exceptions::NodeNotFound("for node data: " + node->copyData());
 }
 
 //*****************************************************************************
@@ -130,6 +165,9 @@ Node* BinaryTree::postorder(int valueIndex, int nodeIndex)
 }
 
 //*****************************************************************************
+
+///
+/// [-] move existing elements to the right ->
 
 void BinaryTree::insert(Node* node, int i)
 {

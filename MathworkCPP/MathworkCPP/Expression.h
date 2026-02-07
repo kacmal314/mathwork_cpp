@@ -10,6 +10,8 @@
 
 #include <string>
 
+#include "Enumerated/NodeType.h"
+#include "VariableNode.h"
 #include "Node.h"
 #include "ExpressionParser.h"
 #include "BinaryTree.h"
@@ -20,7 +22,7 @@ namespace MathworkCPP
   class Expression
   {
 
-  private:
+  protected:
 
     ExpressionParser parser {};
 
@@ -35,6 +37,9 @@ namespace MathworkCPP
 
     virtual double evaluate(NamedPoint variables = {});
 
+  protected:
+
+    BinaryTree resolveVariables(NamedPoint const & variables);
   };
 
 }
