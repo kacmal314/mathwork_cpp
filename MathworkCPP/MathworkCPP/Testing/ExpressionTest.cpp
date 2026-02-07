@@ -14,7 +14,7 @@ void Testing::ExpressionTest::test() /* override - tutaj juz nie dajesz */
 
   try
   {
-    Expression invalid { "$@" };            // throw exception
+    Expression invalid { "$@" }; // throw exception
   }
   catch (Exceptions::ParserException e)
   {
@@ -23,9 +23,15 @@ void Testing::ExpressionTest::test() /* override - tutaj juz nie dajesz */
   
   Expression squared { " z^2+y^2" };      // [+ ^ ^ z 2 y 2 ]
   Expression parenth { "(2 + 2)* 2" };    // [* + 2 2 2]
-  Expression sinefun { "(sin(x))^2*2" };  // [* ^ 2 sin 2 null x]
+  Expression sinefun { "(sind(x))^2*2" };  // [* ^ 2 sind 2 null x]
 
-  squared.evaluate({{"z", 4}, {"y", 8}});   // double(80)
-  parenth.evaluate();                       // double(8)
-  sinefun.evaluate({{"x", 3.14}});          // double(0.00600080060054297305308321210152)
+  console.log<std::string>(" z^2+y^2 = ");
+  console.log<double>(squared.evaluate({{"z", 4}, {"y", 8}}), false); // 80.0
+  
+  console.log("(2 + 2)* 2 = ");
+  console.log(parenth.evaluate(), false); // 8.0
+
+  console.log("(sind(x))^2*2 = ");
+  console.log(sinefun.evaluate({{"x", 90}}), false); // 0.0060008
+  
 }

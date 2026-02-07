@@ -8,18 +8,6 @@ using namespace MathworkCPP;
 
 //*****************************************************************************
 
-void ConsoleInterface::log(std::string message, bool prependNewLine)
-{
-  if (prependNewLine)
-  {
-    std::cout << std::endl;
-  }
-
-  std::cout << message;
-}
-
-//*****************************************************************************
-
 std::string ConsoleInterface::read()
 {
   std::string reading = "";

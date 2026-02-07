@@ -8,12 +8,15 @@
 //
 // used by: BinaryTree (Expression -> 1 Binary Tree -> N Nodes)
 
+#include <stdexcept> // out_of_range
+#include <cmath> // sin, log
 #include <map>
 #include <functional> // std::function
 #include <typeinfo>
 #include <string>
 
 #include "Exceptions/NodeNotEvaluable.h"
+#include "Helper/definitions.h"
 #include "Helper/declarations.h"
 #include "Enumerated/NodeType.h"
 
@@ -39,15 +42,13 @@ namespace MathworkCPP
     using mapStringLookup = std::map<std::string, evaluationLookup>;
 
     ///
-    /// interface member data
+    /// interface static member data
     /// 
     /// * static member belong to Base Class
     /// 
-    /// * shadow it in Derived Class
+    /// * possibility: shadow it in Derived Class
     /// 
-    /// no memory address
-    /// 
-    /// * unless shadowed in Derived Class and defined in .cpp
+    /// no memory address unless defined in implementation.cpp
 
     static const mapStringLookup lookups;
 
@@ -98,16 +99,7 @@ namespace MathworkCPP
 
     virtual Node* create(std::string const & data) = 0;
 
-    //*****************************************************************************
-
-    virtual double evaluateFor(vectorDouble arguments) const
-    {
-      throw Exceptions::NodeNotEvaluable("this node cannot be simplified");
-    };
-
-    //*****************************************************************************
-
-    virtual void evaluate(vectorNodep & postfixArray) { return; };
+    void evaluate(vectorNodep & postfixArray);
 
     //*****************************************************************************
 
@@ -116,6 +108,11 @@ namespace MathworkCPP
     //*****************************************************************************
 
     NodeTypeType copyCode() const { return this->code; }
+
+  protected:
+
+    double evaluateFor(vectorDouble arguments) const;
+
   };
 }
 

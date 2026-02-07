@@ -11,6 +11,7 @@
 // # testing mathematical expressions
 
 #include "./UnitTest.h"
+#include "../ConsoleInterface.h"
 #include "../Expression.h"
 
 namespace MathworkCPP

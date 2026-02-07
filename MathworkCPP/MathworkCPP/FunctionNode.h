@@ -1,8 +1,6 @@
 #ifndef FUNCTIONNODE_H
 #define FUNCTIONNODE_H
 
-#include <cmath>
-
 #include "Node.h"
 #include "Helper/definitions.h"
 
@@ -26,25 +24,10 @@ namespace MathworkCPP
 
     Node* copy() const override;
 
+    ///
+    /// factory function
+
     Node* create(std::string const & data) override;
-
-    void evaluate(Node::vectorNodep & postfixArray) override;
-
-  private:
-
-    //*****************************************************************************
-
-    inline double sin_(double degree)
-    {
-      return sin(degree * PI / 180.0);
-    }
-    
-    //*****************************************************************************
-
-    inline double log_(double x)
-    {
-      return log(x);
-    }
 
   };
 

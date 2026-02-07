@@ -19,7 +19,7 @@ const ExpressionParser::precedenceLookups ExpressionParser::lookups {
   },
 
   {
-    {"^[s][i][n]", [](std::string data) -> Node* { return new FunctionNode("sin"); } },
+    {"^[s][i][n][d]", [](std::string data) -> Node* { return new FunctionNode("sind"); } },
     {"^[l][o][g]", [](std::string data) -> Node* { return new FunctionNode("log"); } }
   },
 

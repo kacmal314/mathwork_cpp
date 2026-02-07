@@ -38,7 +38,7 @@ namespace MathworkCPP
       NodeRule("\\.\\.", "invalid floating point symbol: double dot .."),
       NodeRule(",", "invalid floating point symbol: comma,"),
       NodeRule("[@$#&]", "invalid variable name: invalid chars @$#&"),
-      NodeRule("sin[^(]", "invalid sine function syntax: try sin(...)"),
+      NodeRule("sind[^(]", "invalid sine degree function syntax: try sind(...)"),
       NodeRule("log[^(]", "invalid log function syntax: try log(...)")
     };
 

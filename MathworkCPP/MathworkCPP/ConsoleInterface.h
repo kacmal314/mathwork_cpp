@@ -1,7 +1,10 @@
-#pragma once
+#ifndef CONSOLEINTERFACE_H
+#define CONSOLEINTERFACE_H
 
+#include <iostream>
 #include <string>
 
+#include "Helper/definitions.h"
 #include "Matrix.h"
 #include "Interface.h"
 
@@ -10,15 +13,29 @@ namespace MathworkCPP
 
   class ConsoleInterface : Interface
   {
-    public:
 
-      void log(std::string message = "", bool prependNewLine = false);
+  public:
 
-      std::string read();
+    std::string read();
 
-    private:
+    //*****************************************************************************
 
-      void clear();
+    template <typename T>
+    void log(T message = T {}, bool prependNewLine = true)
+    {
+      if (prependNewLine)
+      {
+        std::cout << std::endl;
+      }
+
+      std::cout << message;
+    }
+    
+  protected:
+
+    void clear();
   };
 
 }
+
+#endif // CONSOLEINTERFACE_H

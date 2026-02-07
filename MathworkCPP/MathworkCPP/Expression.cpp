@@ -49,7 +49,7 @@ double Expression::evaluate(NamedPoint variables)
   for (int i = 0; i < nodesCount; i++)
   {
     auto const & nodep { resolvedTree.postorder(i) };
-
+    
     if (nodep->isFunctional())
     {
       nodep->evaluate(postfixArray);

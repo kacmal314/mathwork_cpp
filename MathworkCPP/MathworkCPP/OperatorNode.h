@@ -12,10 +12,6 @@ namespace MathworkCPP
   class OperatorNode : public Node
   {
 
-  protected:
-
-    static const mapStringLookup lookups;
-
   public:
 
     using Node::Node;
@@ -32,10 +28,6 @@ namespace MathworkCPP
     Node* copy() const override;
 
     Node* create(std::string const & data) override;
-
-    double evaluateFor(vectorDouble arguments) const override;
-
-    void evaluate(vectorNodep & postfixArray) override;
   };
 }
 
