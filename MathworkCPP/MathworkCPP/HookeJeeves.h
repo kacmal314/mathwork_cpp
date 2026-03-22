@@ -19,9 +19,9 @@
 /// 
 ///			Pattern Move: here we use the pattern formula
 
-#include "Constrainer.h";
-#include "Polynomial.h";
-#include "Point.h";
+#include "Constrainer.h"
+#include "Polynomial.h"
+#include "Point.h"
 
 namespace MathworkCPP
 {
