@@ -1,2 +1,2 @@
 # MathworkCPP
-slowly crawling into the infinity~
+a set of classes intended for mathematical operations, linear algebra, expression evaluation, ..
